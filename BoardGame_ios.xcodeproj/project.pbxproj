@@ -9,23 +9,23 @@
 /* Begin PBXBuildFile section */
 		E39ACB05238E1971000973E3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E39ACB04238E1971000973E3 /* AppDelegate.swift */; };
 		E39ACB07238E1971000973E3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E39ACB06238E1971000973E3 /* SceneDelegate.swift */; };
-		E39ACB09238E1971000973E3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E39ACB08238E1971000973E3 /* ViewController.swift */; };
 		E39ACB0C238E1971000973E3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E39ACB0A238E1971000973E3 /* Main.storyboard */; };
 		E39ACB0F238E1971000973E3 /* BoardGame_ios.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E39ACB0D238E1971000973E3 /* BoardGame_ios.xcdatamodeld */; };
 		E39ACB11238E1973000973E3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E39ACB10238E1973000973E3 /* Assets.xcassets */; };
 		E39ACB14238E1973000973E3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E39ACB12238E1973000973E3 /* LaunchScreen.storyboard */; };
+		E39ACB20238E466C000973E3 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E39ACB1F238E466C000973E3 /* LoginVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		E39ACB01238E1971000973E3 /* BoardGame_ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BoardGame_ios.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E39ACB04238E1971000973E3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E39ACB06238E1971000973E3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		E39ACB08238E1971000973E3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		E39ACB0B238E1971000973E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E39ACB0E238E1971000973E3 /* BoardGame_ios.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BoardGame_ios.xcdatamodel; sourceTree = "<group>"; };
 		E39ACB10238E1973000973E3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E39ACB13238E1973000973E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E39ACB15238E1973000973E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E39ACB1F238E466C000973E3 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,9 +58,9 @@
 		E39ACB03238E1971000973E3 /* BoardGame_ios */ = {
 			isa = PBXGroup;
 			children = (
+				E39ACB1E238E4647000973E3 /* Login */,
 				E39ACB04238E1971000973E3 /* AppDelegate.swift */,
 				E39ACB06238E1971000973E3 /* SceneDelegate.swift */,
-				E39ACB08238E1971000973E3 /* ViewController.swift */,
 				E39ACB0A238E1971000973E3 /* Main.storyboard */,
 				E39ACB10238E1973000973E3 /* Assets.xcassets */,
 				E39ACB12238E1973000973E3 /* LaunchScreen.storyboard */,
@@ -68,6 +68,14 @@
 				E39ACB0D238E1971000973E3 /* BoardGame_ios.xcdatamodeld */,
 			);
 			path = BoardGame_ios;
+			sourceTree = "<group>";
+		};
+		E39ACB1E238E4647000973E3 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				E39ACB1F238E466C000973E3 /* LoginVC.swift */,
+			);
+			path = Login;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,9 +149,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E39ACB09238E1971000973E3 /* ViewController.swift in Sources */,
 				E39ACB05238E1971000973E3 /* AppDelegate.swift in Sources */,
 				E39ACB0F238E1971000973E3 /* BoardGame_ios.xcdatamodeld in Sources */,
+				E39ACB20238E466C000973E3 /* LoginVC.swift in Sources */,
 				E39ACB07238E1971000973E3 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
