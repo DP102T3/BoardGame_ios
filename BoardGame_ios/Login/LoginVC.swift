@@ -33,7 +33,6 @@ class LoginVC: UIViewController {
     }
     
     func executeTask(_ url_server: URL, _ requestParam: [String: String]) {
-        // 將輸出資料列印出來除錯用
         print("output: \(requestParam)")
         
         let jsonData = try! JSONEncoder().encode(requestParam)
@@ -48,10 +47,10 @@ class LoginVC: UIViewController {
         let task = session.dataTask(with: request) { (data, response, error) in
             if error == nil {
                 if data != nil {
-                    // 將輸入資料列印出來除錯用
                     print("input: \(String(data: data!, encoding: .utf8)!)")
                     DispatchQueue.main.async {
-                        self.result = String(data: data!, encoding: .utf8)!
+                        self.result = String(data: data!, encoding: .utf8) ?? "error"
+                        //呼叫func next 判斷server端回傳帳密結果
                         self.next(self.result ?? "")
                     }
                 }

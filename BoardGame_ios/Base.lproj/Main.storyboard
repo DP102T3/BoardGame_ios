@@ -19,20 +19,25 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0QS-IO-iB4">
-                                <rect key="frame" x="16" y="395" width="38" height="30"/>
-                                <state key="normal" title="Login"/>
-                                <connections>
-                                    <action selector="clickLogin:" destination="Jp2-4h-2IY" eventType="touchUpInside" id="QlN-nX-51h"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mmg-4G-41A">
-                                <rect key="frame" x="344" y="395" width="50" height="30"/>
-                                <state key="normal" title="SingUp"/>
-                                <connections>
-                                    <action selector="clickClear:" destination="Jp2-4h-2IY" eventType="touchUpInside" id="Sgp-GS-8TK"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="290" translatesAutoresizingMaskIntoConstraints="NO" id="nHt-XE-g4J">
+                                <rect key="frame" x="16" y="395" width="378" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0QS-IO-iB4">
+                                        <rect key="frame" x="0.0" y="0.0" width="38" height="30"/>
+                                        <state key="normal" title="Login"/>
+                                        <connections>
+                                            <action selector="clickLogin:" destination="Jp2-4h-2IY" eventType="touchUpInside" id="QlN-nX-51h"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mmg-4G-41A">
+                                        <rect key="frame" x="328" y="0.0" width="50" height="30"/>
+                                        <state key="normal" title="SingUp"/>
+                                        <connections>
+                                            <action selector="clickClear:" destination="Jp2-4h-2IY" eventType="touchUpInside" id="Sgp-GS-8TK"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="mov-wm-3Ue">
                                 <rect key="frame" x="16" y="163" width="362" height="113"/>
                                 <subviews>
@@ -73,7 +78,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Rq-9C-W4R">
                                 <rect key="frame" x="152" y="324" width="206" height="33"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="33" id="sSl-pl-y94"/>
+                                    <constraint firstAttribute="height" constant="33" id="nNd-0q-ssT"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -82,17 +87,15 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="mov-wm-3Ue" firstAttribute="top" secondItem="7SS-qI-osc" secondAttribute="bottom" constant="119" id="313-Jy-JVY"/>
-                            <constraint firstItem="0Rq-9C-W4R" firstAttribute="leading" secondItem="enF-88-hoU" secondAttribute="leading" constant="152" id="7KW-IT-0ga"/>
-                            <constraint firstItem="0Rq-9C-W4R" firstAttribute="top" secondItem="mov-wm-3Ue" secondAttribute="bottom" constant="48" id="8kM-cn-iRK"/>
+                            <constraint firstItem="nHt-XE-g4J" firstAttribute="top" secondItem="enF-88-hoU" secondAttribute="top" constant="351" id="0O8-g3-GBl"/>
+                            <constraint firstItem="mov-wm-3Ue" firstAttribute="top" secondItem="enF-88-hoU" secondAttribute="top" constant="119" id="313-Jy-JVY"/>
+                            <constraint firstItem="nHt-XE-g4J" firstAttribute="leading" secondItem="enF-88-hoU" secondAttribute="leading" constant="16" id="3Kq-bG-563"/>
                             <constraint firstItem="mov-wm-3Ue" firstAttribute="leading" secondItem="enF-88-hoU" secondAttribute="leading" constant="16" id="FLU-3e-0SB"/>
-                            <constraint firstItem="mmg-4G-41A" firstAttribute="trailing" secondItem="Hnc-Nf-LGT" secondAttribute="trailingMargin" id="UqK-Ad-ggz"/>
-                            <constraint firstItem="Kla-TH-dvv" firstAttribute="top" secondItem="0QS-IO-iB4" secondAttribute="bottom" constant="437" id="aTM-BD-1Dc"/>
-                            <constraint firstItem="0QS-IO-iB4" firstAttribute="baseline" secondItem="mmg-4G-41A" secondAttribute="baseline" id="hzx-QB-EXz"/>
+                            <constraint firstItem="enF-88-hoU" firstAttribute="trailing" secondItem="0Rq-9C-W4R" secondAttribute="trailing" constant="56" id="Y7l-D2-HJI"/>
                             <constraint firstItem="enF-88-hoU" firstAttribute="trailing" secondItem="mov-wm-3Ue" secondAttribute="trailing" constant="36" id="iHQ-nz-0Hg"/>
-                            <constraint firstItem="mov-wm-3Ue" firstAttribute="leading" secondItem="0QS-IO-iB4" secondAttribute="leading" id="jrh-er-lOB"/>
-                            <constraint firstItem="enF-88-hoU" firstAttribute="trailing" secondItem="0Rq-9C-W4R" secondAttribute="trailing" constant="56" id="lAT-3R-jpt"/>
-                            <constraint firstItem="mmg-4G-41A" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="0QS-IO-iB4" secondAttribute="trailing" constant="8" symbolic="YES" id="r2H-UP-EQX"/>
+                            <constraint firstItem="0Rq-9C-W4R" firstAttribute="leading" secondItem="enF-88-hoU" secondAttribute="leading" constant="152" id="jsL-0I-ucs"/>
+                            <constraint firstItem="enF-88-hoU" firstAttribute="trailing" secondItem="nHt-XE-g4J" secondAttribute="trailing" constant="20" id="ksD-8L-vl4"/>
+                            <constraint firstItem="nHt-XE-g4J" firstAttribute="top" secondItem="0Rq-9C-W4R" secondAttribute="bottom" constant="38" id="lCg-J1-1nz"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="enF-88-hoU"/>
                     </view>
