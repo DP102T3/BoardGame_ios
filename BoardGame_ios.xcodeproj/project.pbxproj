@@ -14,6 +14,7 @@
 		E39ACB11238E1973000973E3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E39ACB10238E1973000973E3 /* Assets.xcassets */; };
 		E39ACB14238E1973000973E3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E39ACB12238E1973000973E3 /* LaunchScreen.storyboard */; };
 		E39ACB20238E466C000973E3 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E39ACB1F238E466C000973E3 /* LoginVC.swift */; };
+		E39ACB22238E65EC000973E3 /* ResultVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E39ACB21238E65EC000973E3 /* ResultVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		E39ACB13238E1973000973E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E39ACB15238E1973000973E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E39ACB1F238E466C000973E3 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		E39ACB21238E65EC000973E3 /* ResultVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +76,7 @@
 			isa = PBXGroup;
 			children = (
 				E39ACB1F238E466C000973E3 /* LoginVC.swift */,
+				E39ACB21238E65EC000973E3 /* ResultVC.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -149,6 +152,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E39ACB22238E65EC000973E3 /* ResultVC.swift in Sources */,
 				E39ACB05238E1971000973E3 /* AppDelegate.swift in Sources */,
 				E39ACB0F238E1971000973E3 /* BoardGame_ios.xcdatamodeld in Sources */,
 				E39ACB20238E466C000973E3 /* LoginVC.swift in Sources */,
