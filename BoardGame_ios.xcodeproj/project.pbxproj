@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E32E3BF12393C0E600D7AB67 /* favShopVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E32E3BF02393C0E600D7AB67 /* favShopVC.swift */; };
 		E39ACB05238E1971000973E3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E39ACB04238E1971000973E3 /* AppDelegate.swift */; };
 		E39ACB07238E1971000973E3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E39ACB06238E1971000973E3 /* SceneDelegate.swift */; };
 		E39ACB0C238E1971000973E3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E39ACB0A238E1971000973E3 /* Main.storyboard */; };
@@ -14,10 +15,18 @@
 		E39ACB11238E1973000973E3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E39ACB10238E1973000973E3 /* Assets.xcassets */; };
 		E39ACB14238E1973000973E3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E39ACB12238E1973000973E3 /* LaunchScreen.storyboard */; };
 		E39ACB20238E466C000973E3 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E39ACB1F238E466C000973E3 /* LoginVC.swift */; };
-		E39ACB22238E65EC000973E3 /* ResultVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E39ACB21238E65EC000973E3 /* ResultVC.swift */; };
+		E39ACB25238EA523000973E3 /* SingOutTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E39ACB24238EA523000973E3 /* SingOutTVC.swift */; };
+		E39ACBBE238FE8A3000973E3 /* FavShopCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E39ACBBD238FE8A3000973E3 /* FavShopCell.swift */; };
+		E39ACBC0238FED69000973E3 /* ShopData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E39ACBBF238FED69000973E3 /* ShopData.swift */; };
+		E39ACBC3238FF46B000973E3 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = E39ACBC2238FF46B000973E3 /* Common.swift */; };
+		E39ACBE823920A01000973E3 /* MapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E39ACBE723920A01000973E3 /* MapVC.swift */; };
+		E39ACBEA23928333000973E3 /* TPDirect.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E39ACBE923928332000973E3 /* TPDirect.framework */; };
+		E39ACBEC2392835D000973E3 /* TPDirectResource in Resources */ = {isa = PBXBuildFile; fileRef = E39ACBEB2392835D000973E3 /* TPDirectResource */; };
+		E39ACBEE23928763000973E3 /* TapPay.swift in Sources */ = {isa = PBXBuildFile; fileRef = E39ACBED23928763000973E3 /* TapPay.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E32E3BF02393C0E600D7AB67 /* favShopVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = favShopVC.swift; sourceTree = "<group>"; };
 		E39ACB01238E1971000973E3 /* BoardGame_ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BoardGame_ios.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E39ACB04238E1971000973E3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E39ACB06238E1971000973E3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -27,7 +36,15 @@
 		E39ACB13238E1973000973E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E39ACB15238E1973000973E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E39ACB1F238E466C000973E3 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
-		E39ACB21238E65EC000973E3 /* ResultVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultVC.swift; sourceTree = "<group>"; };
+		E39ACB24238EA523000973E3 /* SingOutTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingOutTVC.swift; sourceTree = "<group>"; };
+		E39ACBBD238FE8A3000973E3 /* FavShopCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavShopCell.swift; sourceTree = "<group>"; };
+		E39ACBBF238FED69000973E3 /* ShopData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopData.swift; sourceTree = "<group>"; };
+		E39ACBC2238FF46B000973E3 /* Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
+		E39ACBE723920A01000973E3 /* MapVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapVC.swift; sourceTree = "<group>"; };
+		E39ACBE923928332000973E3 /* TPDirect.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TPDirect.framework; sourceTree = "<group>"; };
+		E39ACBEB2392835D000973E3 /* TPDirectResource */ = {isa = PBXFileReference; lastKnownFileType = folder; path = TPDirectResource; sourceTree = "<group>"; };
+		E39ACBED23928763000973E3 /* TapPay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapPay.swift; sourceTree = "<group>"; };
+		E39ACBEF23928C4B000973E3 /* BoardGame_ios.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BoardGame_ios.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +52,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E39ACBEA23928333000973E3 /* TPDirect.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -46,6 +64,8 @@
 			children = (
 				E39ACB03238E1971000973E3 /* BoardGame_ios */,
 				E39ACB02238E1971000973E3 /* Products */,
+				E39ACBEB2392835D000973E3 /* TPDirectResource */,
+				E39ACBE923928332000973E3 /* TPDirect.framework */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,10 +80,10 @@
 		E39ACB03238E1971000973E3 /* BoardGame_ios */ = {
 			isa = PBXGroup;
 			children = (
-				E39ACB1E238E4647000973E3 /* Login */,
+				E39ACBEF23928C4B000973E3 /* BoardGame_ios.entitlements */,
+				E39ACB1E238E4647000973E3 /* Login_SingOut_GroupList_favShop */,
 				E39ACB04238E1971000973E3 /* AppDelegate.swift */,
 				E39ACB06238E1971000973E3 /* SceneDelegate.swift */,
-				E39ACB0A238E1971000973E3 /* Main.storyboard */,
 				E39ACB10238E1973000973E3 /* Assets.xcassets */,
 				E39ACB12238E1973000973E3 /* LaunchScreen.storyboard */,
 				E39ACB15238E1973000973E3 /* Info.plist */,
@@ -72,13 +92,44 @@
 			path = BoardGame_ios;
 			sourceTree = "<group>";
 		};
-		E39ACB1E238E4647000973E3 /* Login */ = {
+		E39ACB1E238E4647000973E3 /* Login_SingOut_GroupList_favShop */ = {
+			isa = PBXGroup;
+			children = (
+				E39ACBC1238FF45A000973E3 /* Common */,
+				E39ACBBA238FE827000973E3 /* FavShop */,
+				E39ACB23238EA42F000973E3 /* Login */,
+				E39ACB24238EA523000973E3 /* SingOutTVC.swift */,
+				E39ACB0A238E1971000973E3 /* Main.storyboard */,
+				E39ACBED23928763000973E3 /* TapPay.swift */,
+			);
+			path = Login_SingOut_GroupList_favShop;
+			sourceTree = "<group>";
+		};
+		E39ACB23238EA42F000973E3 /* Login */ = {
 			isa = PBXGroup;
 			children = (
 				E39ACB1F238E466C000973E3 /* LoginVC.swift */,
-				E39ACB21238E65EC000973E3 /* ResultVC.swift */,
 			);
 			path = Login;
+			sourceTree = "<group>";
+		};
+		E39ACBBA238FE827000973E3 /* FavShop */ = {
+			isa = PBXGroup;
+			children = (
+				E39ACBBD238FE8A3000973E3 /* FavShopCell.swift */,
+				E39ACBBF238FED69000973E3 /* ShopData.swift */,
+				E39ACBE723920A01000973E3 /* MapVC.swift */,
+				E32E3BF02393C0E600D7AB67 /* favShopVC.swift */,
+			);
+			path = FavShop;
+			sourceTree = "<group>";
+		};
+		E39ACBC1238FF45A000973E3 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				E39ACBC2238FF46B000973E3 /* Common.swift */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -142,6 +193,7 @@
 				E39ACB14238E1973000973E3 /* LaunchScreen.storyboard in Resources */,
 				E39ACB11238E1973000973E3 /* Assets.xcassets in Resources */,
 				E39ACB0C238E1971000973E3 /* Main.storyboard in Resources */,
+				E39ACBEC2392835D000973E3 /* TPDirectResource in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -152,11 +204,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E39ACB22238E65EC000973E3 /* ResultVC.swift in Sources */,
+				E39ACBC0238FED69000973E3 /* ShopData.swift in Sources */,
 				E39ACB05238E1971000973E3 /* AppDelegate.swift in Sources */,
 				E39ACB0F238E1971000973E3 /* BoardGame_ios.xcdatamodeld in Sources */,
+				E39ACBBE238FE8A3000973E3 /* FavShopCell.swift in Sources */,
+				E32E3BF12393C0E600D7AB67 /* favShopVC.swift in Sources */,
+				E39ACBE823920A01000973E3 /* MapVC.swift in Sources */,
+				E39ACB25238EA523000973E3 /* SingOutTVC.swift in Sources */,
 				E39ACB20238E466C000973E3 /* LoginVC.swift in Sources */,
 				E39ACB07238E1971000973E3 /* SceneDelegate.swift in Sources */,
+				E39ACBC3238FF46B000973E3 /* Common.swift in Sources */,
+				E39ACBEE23928763000973E3 /* TapPay.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,7 +358,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = BoardGame_ios/BoardGame_ios.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 92B2GX2LG4;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = BoardGame_ios/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -317,7 +381,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = BoardGame_ios/BoardGame_ios.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 92B2GX2LG4;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = BoardGame_ios/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

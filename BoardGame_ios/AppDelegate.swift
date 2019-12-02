@@ -8,6 +8,9 @@
 
 import UIKit
 import CoreData
+import TPDirect
+import AdSupport
+
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -15,7 +18,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        TPDSetup.setWithAppId(15082, withAppKey: "app_1gDs8oTGUgj4HXOlUsruJyK8tHaxairM2LS1bRAkTg0elYEf2tH5xn9MFdGJ", with: TPDServerType.sandBox)
+    TPDSetup.shareInstance().setupIDFA(ASIdentifierManager.shared().advertisingIdentifier.uuidString)
+
+        TPDSetup.shareInstance().serverSync()
+        
         return true
     }
 
