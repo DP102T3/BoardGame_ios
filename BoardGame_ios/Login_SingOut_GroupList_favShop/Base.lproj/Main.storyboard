@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="DhR-64-NS5">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Jp2-4h-2IY">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
@@ -27,6 +27,7 @@
                                         <state key="normal" title="Login"/>
                                         <connections>
                                             <action selector="clickLogin:" destination="Jp2-4h-2IY" eventType="touchUpInside" id="QlN-nX-51h"/>
+                                            <segue destination="2lr-K7-PSB" kind="presentation" modalPresentationStyle="fullScreen" id="0do-6S-iS6"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mmg-4G-41A">
@@ -107,7 +108,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OMr-JX-Zbo" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-94" y="62"/>
+            <point key="canvasLocation" x="-2062" y="2052"/>
         </scene>
         <!--Fav ShopVC-->
         <scene sceneID="swn-KJ-Cwi">
@@ -230,12 +231,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YbB-YD-8Nb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2346.376811594203" y="61.607142857142854"/>
+            <point key="canvasLocation" x="2348" y="3407"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Profile-->
         <scene sceneID="ODh-CS-tus">
             <objects>
                 <navigationController storyboardIdentifier="favShopNav" id="DhR-64-NS5" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Profile" image="ic_profile" id="7PV-Fv-xAa"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="95y-oE-aOS">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -246,7 +248,92 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gDP-zv-6dP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1504" y="62"/>
+            <point key="canvasLocation" x="1503" y="3407"/>
+        </scene>
+        <!--Shops-->
+        <scene sceneID="AdN-K9-UML">
+            <objects>
+                <viewController id="4Q6-Tn-Xh3" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eD8-7h-HFb">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="Fjt-io-Vio"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Shops" image="ic_shops" id="1p2-HQ-zNV"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3h5-Kq-RZH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1503" y="1392"/>
+        </scene>
+        <!--Chat-->
+        <scene sceneID="5my-r9-BlP">
+            <objects>
+                <viewController id="xdn-1E-uSu" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4lu-2W-E0c">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="946-ey-JLl"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Chat" image="ic_chat" id="8g1-cj-fvr"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eeE-MG-pZX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1503" y="2052"/>
+        </scene>
+        <!--Friends-->
+        <scene sceneID="ZOZ-kW-uHg">
+            <objects>
+                <viewController id="S8h-1T-mzJ" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="UEs-T8-4cE">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="xnu-58-W8p"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Friends" image="ic_friends" id="GRS-zz-lZg"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4ul-x7-zdh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1503" y="2706"/>
+        </scene>
+        <!--Groups-->
+        <scene sceneID="bTc-s8-dW3">
+            <objects>
+                <viewController id="fgN-tc-KRy" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Q91-5L-LrC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="K5g-og-afB"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Groups" image="ic_groups" id="anM-2W-LmQ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NZ8-3Y-kUp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1503" y="743"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="4wf-WG-w8n">
+            <objects>
+                <tabBarController id="2lr-K7-PSB" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="zwA-xp-XEQ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="fgN-tc-KRy" kind="relationship" relationship="viewControllers" id="Qm8-fV-psZ"/>
+                        <segue destination="4Q6-Tn-Xh3" kind="relationship" relationship="viewControllers" id="8WJ-f6-fwK"/>
+                        <segue destination="xdn-1E-uSu" kind="relationship" relationship="viewControllers" id="dKU-oX-kOe"/>
+                        <segue destination="S8h-1T-mzJ" kind="relationship" relationship="viewControllers" id="tlL-8k-v0b"/>
+                        <segue destination="DhR-64-NS5" kind="relationship" relationship="viewControllers" id="Bta-QW-HlG"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0tZ-OY-OUx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-839" y="2052"/>
         </scene>
         <!--MapVC-->
         <scene sceneID="d16-5a-gx6">
@@ -271,7 +358,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Znm-mC-qAH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3116" y="62"/>
+            <point key="canvasLocation" x="3233" y="3406"/>
         </scene>
         <!--Sing OutTVC-->
         <scene sceneID="yIo-H2-cYl">
@@ -312,10 +399,15 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rAt-5K-cmi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-838" y="62"/>
+            <point key="canvasLocation" x="-2062" y="1392"/>
         </scene>
     </scenes>
     <resources>
+        <image name="ic_chat" width="20" height="20"/>
+        <image name="ic_friends" width="20" height="20"/>
+        <image name="ic_groups" width="20" height="20"/>
+        <image name="ic_profile" width="20" height="20"/>
+        <image name="ic_shops" width="20" height="20"/>
         <image name="map.fill" catalog="system" width="64" height="56"/>
         <image name="star.fill" catalog="system" width="64" height="58"/>
     </resources>
