@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SingOutTVC: UITableViewController {
+class SignOutTVC: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

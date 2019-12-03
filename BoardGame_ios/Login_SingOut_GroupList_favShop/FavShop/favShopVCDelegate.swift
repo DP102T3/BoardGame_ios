@@ -1,5 +1,5 @@
 import Foundation
 
-protocol favShopVCCellDelegate {
+protocol FavShopVCCellDelegate {
     func favShopVCCellOnClick(_ sender: FavShopCell)
 }

@@ -7,7 +7,7 @@ class FavShopCell: UITableViewCell {
     @IBOutlet weak var lbAddress: UILabel!
     @IBOutlet weak var lbRate: UILabel!
     
-    var delegate: favShopVCCellDelegate?
+    var delegate: FavShopVCCellDelegate?
 
     
     @IBAction func mapOnClick(_ sender: Any) {

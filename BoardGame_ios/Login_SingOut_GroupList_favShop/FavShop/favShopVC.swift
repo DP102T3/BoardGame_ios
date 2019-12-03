@@ -8,10 +8,10 @@
 
 import UIKit
 
-class favShopVC: UIViewController, UITableViewDataSource ,UITableViewDelegate{
+class FavShopVC: UIViewController, UITableViewDataSource ,UITableViewDelegate{
     @IBOutlet weak var segmentedControl: UISegmentedControl!
     @IBOutlet weak var favTableView: UITableView!
-
+    
     
     var favShopData = [ShopData]()
     let url_server = URL(string: common_url + "FavShopServlet")
@@ -30,10 +30,10 @@ class favShopVC: UIViewController, UITableViewDataSource ,UITableViewDelegate{
         self.favTableView.refreshControl = refreshControl
     }
     
-//        override func viewWillAppear(_ animated: Bool) {
-//            showAllFavShops()
-//            print("viewWillAppear")
-//        }
+    //        override func viewWillAppear(_ animated: Bool) {
+    //            showAllFavShops()
+    //            print("viewWillAppear")
+    //        }
     
     @objc func showAllFavShops() {
         var requestParam = [String: String]()
@@ -72,13 +72,22 @@ class favShopVC: UIViewController, UITableViewDataSource ,UITableViewDelegate{
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        switch segmentedControl.indexPathForSelectedRow {
+        case 0:
+            print("關於頁面")
+            favShopData.removeAll()
+            self.favTableView.reloadData()
+        case 1:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "groupCell",for: indexPath) as! FavGroupCell
+        case 2:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "favShop",for: indexPath) as! FavShopCell
+            favShopData.removeAll()
+            showAllFavShops()
+        default:
+            break
+        }
         
-       
-        let cellId = "favShop"
-        // tableViewCell預設的imageView點擊後會改變尺寸，所以建立UITableViewCell子類別SpotCell
-        let cell = tableView.dequeueReusableCell(withIdentifier: cellId,for: indexPath) as! FavShopCell
         let shop = favShopData[indexPath.row]
-
         
         //尚未取得圖片，另外開啟task請求
         var requestParam = [String: Any]()
@@ -102,22 +111,22 @@ class favShopVC: UIViewController, UITableViewDataSource ,UITableViewDelegate{
         }
         
         
-//        cell.delegate = self
+        //        cell.delegate = self
         cell.lbShopName.text = shop.shopName
         cell.lbAddress.text = shop.address
         cell.lbRate.text = String(shop.rate)
         return cell
     }
     
-    @IBAction func SegmentedChage(_ sender: UISegmentedControl) {
-        if sender.selectedSegmentIndex == 2{
-              favShopData.removeAll()
-              showAllFavShops()
-        }else{
-            favShopData.removeAll()
-            self.favTableView.reloadData()
-        }
-    }
+    //    @IBAction func SegmentedChage(_ sender: UISegmentedControl) {
+    //        if sender.selectedSegmentIndex == 2{
+    //              favShopData.removeAll()
+    //              showAllFavShops()
+    //        }else{
+    //            favShopData.removeAll()
+    //            self.favTableView.reloadData()
+    //        }
+    //    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "mapSegue" {

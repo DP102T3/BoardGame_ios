@@ -31,7 +31,7 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mmg-4G-41A">
                                         <rect key="frame" x="328" y="0.0" width="50" height="30"/>
-                                        <state key="normal" title="SingUp"/>
+                                        <state key="normal" title="SignUp"/>
                                         <connections>
                                             <action selector="clickClear:" destination="Jp2-4h-2IY" eventType="touchUpInside" id="Sgp-GS-8TK"/>
                                         </connections>
@@ -112,7 +112,7 @@
         <!--個人資訊-->
         <scene sceneID="swn-KJ-Cwi">
             <objects>
-                <viewController id="UN7-cF-mgG" customClass="favShopVC" customModule="BoardGame_ios" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="UN7-cF-mgG" customClass="FavShopVC" customModule="BoardGame_ios" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="51n-Rj-6JM">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -211,7 +211,7 @@
                                             <outlet property="lbShopName" destination="202-1W-dn6" id="qeG-Zl-L3B"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="groupID" rowHeight="100" id="CAm-dK-CQf">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="groupCell" rowHeight="100" id="CAm-dK-CQf" customClass="FavGroupCell" customModule="BoardGame_ios" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="128" width="414" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="CAm-dK-CQf" id="dOS-Nc-u7t">
@@ -273,6 +273,13 @@
                                                 <constraint firstAttribute="trailingMargin" secondItem="ydz-oh-m7w" secondAttribute="trailing" constant="136" id="uS4-e3-F8a"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="ivGroup" destination="mGr-Mo-Fj4" id="lim-qP-uhj"/>
+                                            <outlet property="lbGroupName" destination="ZfH-Xj-elr" id="SdT-zv-pcn"/>
+                                            <outlet property="lbReview" destination="Nng-1l-Fc6" id="wu0-gd-Lkb"/>
+                                            <outlet property="lbSuccess" destination="ydz-oh-m7w" id="vKF-PS-Uex"/>
+                                            <outlet property="lbTime" destination="LOY-gp-GWR" id="aVR-Sg-X9C"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -290,7 +297,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="dId-mb-G6e"/>
                     </view>
-                    <navigationItem key="navigationItem" title="個人資訊" id="sjQ-pU-AnX"/>
+                    <navigationItem key="navigationItem" title="個人資訊" id="sjQ-pU-AnX">
+                        <barButtonItem key="rightBarButtonItem" title="設定" id="LOH-3f-ZGI"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="favTableView" destination="ljh-g1-D6n" id="ltL-Au-XdH"/>
                         <outlet property="segmentedControl" destination="mPK-BX-BTW" id="OJn-Nv-dqp"/>
@@ -339,12 +348,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Znm-mC-qAH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2655" y="62"/>
+            <point key="canvasLocation" x="2735" y="62"/>
         </scene>
-        <!--Sing OutTVC-->
+        <!--Sign OutTVC-->
         <scene sceneID="yIo-H2-cYl">
             <objects>
-                <tableViewController storyboardIdentifier="singoutvc" id="bUf-ul-2Fz" customClass="SingOutTVC" customModule="BoardGame_ios" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="singoutvc" id="bUf-ul-2Fz" customClass="SignOutTVC" customModule="BoardGame_ios" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="iCR-tZ-gyH">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
