@@ -26,3 +26,17 @@ func showSimpleAlert(message: String, viewController: UIViewController) {
     viewController.present(alertController, animated: true, completion:nil)
 }
 
+// 存入UserDefaults（登入帳號）
+func saveUserDefaults(_ key: String, _ value: String) {
+    if let data = try? JSONEncoder().encode(value) {
+        UserDefaults.standard.set(data, forKey: key)
+    }
+}
+
+// 從UserDefaults取出（登入帳號）
+func loadUserDefaults(_ forKey: String) -> String {
+    if let data = UserDefaults.standard.data(forKey: forKey){
+        if let value = try? JSONDecoder().decode(String.self, from: data){return value}
+    }
+    return ""
+}
