@@ -2,7 +2,7 @@
 //  RegisterDetailVC.swift
 //  BoardGame_ios
 //
-//  Created by 洪瑞奇 on 2019/12/3.
+//  Created by 洪瑞奇 on 2019/12/4.
 //  Copyright © 2019 黃國展. All rights reserved.
 //
 
@@ -12,16 +12,64 @@ class RegisterDetailVC: UIViewController {
 
     @IBOutlet weak var tfName: UITextField!
     @IBOutlet weak var tfNkName: UITextField!
-    @IBOutlet weak var segmentGender: UISegmentedControl!
+    @IBOutlet weak var segment: UISegmentedControl!
     @IBOutlet weak var tfBirthday: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
         // Do any additional setup after loading the view.
+        datePicker()
     }
     
-    @IBAction func selectBirthday(_ sender: Any) {
+    @IBAction func pickBirthday(_ sender: Any) {
         datePicker()
+    }
+    
+    @IBAction func onSendClick(_ sender: Any) {
+         let controller = UIAlertController(title: "送出註冊資料", message: "以上資料不可修改，請確認是否送出？", preferredStyle: .alert)
+                let okAction = UIAlertAction(title: "確定", style: .default) { (_) in
+                    // 利用URLSession與server溝通
+                    let configuration = URLSessionConfiguration.default
+                    let session = URLSession(configuration: configuration)
+
+                    // 準備要傳給server的request
+                    let url = URL(string: "http://localhost:8080/Advertisement_Server/Register")
+                    var request : URLRequest = URLRequest(url: url!)
+
+                    // 利用POST方法傳給server
+                    request.httpMethod = "POST"
+
+                    let json: [String: Any] = ["name": "rich", "id": "iamrich"]
+                    // 假設這邊要註冊資料上傳 -> 先把註冊資訊的資料轉成jsonData
+                    let jsonData = try? JSONSerialization.data(withJSONObject: json)
+                    // {"name":"rich","id":"iamrich","mood":"happy"}
+
+                    // 放入body
+                    request.httpBody = jsonData
+
+                    // 把request利用session.dataTask傳給目標server
+                    let dataTask = session.dataTask(with: request) { data,response,error in
+                        // 如果沒有response則show error
+                       guard let httpResponse = response as? HTTPURLResponse
+                       else {
+                          print("error: not a valid http response")
+                          return
+                       }
+                    }
+                    dataTask.resume()
+                
+        //      若成功送出資料執行以下程式碼
+                    let controller = UIAlertController(title: "註冊結果", message: "註冊成功！", preferredStyle: .alert)
+                    let okAction = UIAlertAction(title: "確定", style: .default, handler: nil)
+                    controller.addAction(okAction)
+                    self.present(controller, animated: true, completion: nil)
+                
+                }
+                controller.addAction(okAction)
+                let cancelAction = UIAlertAction(title: "取消", style: .cancel, handler: nil)
+                controller.addAction(cancelAction)
+                present(controller, animated: true, completion: nil)
     }
     
     func datePicker(){
@@ -62,52 +110,7 @@ class RegisterDetailVC: UIViewController {
         }
         dateFormatter.string(from: datePickerView.date)
     }
-    
-    @IBAction func onSendClick(_ sender: Any) {
-        let controller = UIAlertController(title: "送出註冊資料", message: "以上資料不可修改，請確認是否送出？", preferredStyle: .alert)
-        let okAction = UIAlertAction(title: "確定", style: .default) { (_) in
-            // 利用URLSession與server溝通
-            let configuration = URLSessionConfiguration.default
-            let session = URLSession(configuration: configuration)
 
-            // 準備要傳給server的request
-            let url = URL(string: "http://localhost:8080/Advertisement_Server/Register")
-            var request : URLRequest = URLRequest(url: url!)
-
-            // 利用POST方法傳給server
-            request.httpMethod = "POST"
-
-            let json: [String: Any] = ["name": "rich", "id": "iamrich"]
-            // 假設這邊要註冊資料上傳 -> 先把註冊資訊的資料轉成jsonData
-            let jsonData = try? JSONSerialization.data(withJSONObject: json)
-            // {"name":"rich","id":"iamrich","mood":"happy"}
-
-            // 放入body
-            request.httpBody = jsonData
-
-            // 把request利用session.dataTask傳給目標server
-            let dataTask = session.dataTask(with: request) { data,response,error in
-                // 如果沒有response則show error
-               guard let httpResponse = response as? HTTPURLResponse
-               else {
-                  print("error: not a valid http response")
-                  return
-               }
-            }
-            dataTask.resume()
-        
-//      若成功送出資料執行以下程式碼
-            let controller = UIAlertController(title: "註冊結果", message: "註冊成功！", preferredStyle: .alert)
-            let okAction = UIAlertAction(title: "確定", style: .default, handler: nil)
-            controller.addAction(okAction)
-            present(controller, animated: true, completion: nil)
-        
-        }
-        controller.addAction(okAction)
-        let cancelAction = UIAlertAction(title: "取消", style: .cancel, handler: nil)
-        controller.addAction(cancelAction)
-        present(controller, animated: true, completion: nil)
-    }
     /*
     // MARK: - Navigation
 

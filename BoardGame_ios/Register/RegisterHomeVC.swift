@@ -2,7 +2,7 @@
 //  RegisterHomeVC.swift
 //  BoardGame_ios
 //
-//  Created by 洪瑞奇 on 2019/12/3.
+//  Created by 洪瑞奇 on 2019/12/4.
 //  Copyright © 2019 黃國展. All rights reserved.
 //
 
@@ -10,6 +10,10 @@ import UIKit
 
 class RegisterHomeVC: UIViewController {
 
+    @IBOutlet weak var tfAccount: UITextField!
+    @IBOutlet weak var tfPassword: UITextField!
+    @IBOutlet weak var tfPwConfirmed: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
