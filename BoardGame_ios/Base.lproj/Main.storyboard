@@ -435,7 +435,7 @@
         <scene sceneID="peT-eF-MjB">
             <objects>
                 <viewControllerPlaceholder storyboardIdentifier="ChatList" storyboardName="Chat" id="tDm-vT-G9G" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Chat" image="ic_chat" id="yWf-2h-bhs"/>
+                    <tabBarItem key="tabBarItem" title="" id="yWf-2h-bhs"/>
                     <navigationItem key="navigationItem" id="4T5-3H-wH4"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mlI-sn-tZC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -570,7 +570,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="ic_chat" width="20" height="20"/>
         <image name="ic_friends" width="20" height="20"/>
         <image name="ic_groups" width="20" height="20"/>
         <image name="ic_profile" width="20" height="20"/>
