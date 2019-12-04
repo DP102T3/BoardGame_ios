@@ -15,7 +15,7 @@ class ChatVC: UIViewController, UITableViewDataSource {
     var groups: [Group]?
     var image: String = ""
     var name: String = ""
-    let url_server = URL(string: common_url + "ChatServlet")
+    let url_server = URL(string: common_url_forChat + "ChatServlet")
     
     @IBOutlet weak var segmentControl: UISegmentedControl!
     @IBOutlet weak var listTableView: UITableView!
@@ -116,15 +116,16 @@ class ChatVC: UIViewController, UITableViewDataSource {
                     if data != nil {
                         // 將輸入資料列印出來除錯用
                         print("input: \(String(data: data!, encoding: .utf8)!)")
-                        
-                        if let result = try? JSONDecoder().decode([Friend].self, from: data!) {
-                            self.friends = result
+                        DispatchQueue.main.async {
+                            if let result = try? JSONDecoder().decode([Friend].self, from: data!) {
+                                self.friends = result
+                            }
+                            self.listTableView.reloadData()
                         }
                     }
                 } else {
                     print(error!.localizedDescription)
                 }
-                //                self.listTableView.reloadData()
             }
             
         case 1:
@@ -140,9 +141,11 @@ class ChatVC: UIViewController, UITableViewDataSource {
                     if data != nil {
                         // 將輸入資料列印出來除錯用
                         print("input: \(String(data: data!, encoding: .utf8)!)")
-                        
-                        if let result = try? JSONDecoder().decode([Group].self, from: data!) {
-                            self.groups = result
+                        DispatchQueue.main.async {
+                            if let result = try? JSONDecoder().decode([Group].self, from: data!) {
+                                self.groups = result
+                            }
+                            self.listTableView.reloadData()
                         }
                     }
                 } else {

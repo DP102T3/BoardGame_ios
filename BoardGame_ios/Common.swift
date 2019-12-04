@@ -5,6 +5,7 @@ import UIKit
 // let URL_SERVER = "http://192.168.0.101:8080/Spot_MySQL_Web/"
 // 模擬器
 let common_url = "http://127.0.0.1:8080/BoardGame_Web/"
+let common_url_forChat = "http://127.0.0.1:8080/DevBG/"
 
 func executeTask(_ url_server: URL, _ requestParam: [String: Any], completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void) {
     // requestParam值為Any就必須使用JSONSerialization.data()，而非JSONEncoder.encode()
