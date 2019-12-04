@@ -38,7 +38,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image" translatesAutoresizingMaskIntoConstraints="NO" id="9Q6-5x-6p8">
-                                                    <rect key="frame" x="8" y="8" width="60" height="60"/>
+                                                    <rect key="frame" x="8" y="8" width="60" height="60.5"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="60" id="P8x-cQ-c2w"/>
                                                         <constraint firstAttribute="width" constant="60" id="dbK-4j-8Lj"/>
@@ -257,7 +257,7 @@
         <scene sceneID="HT2-rW-MvZ">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="rSx-VJ-Voi" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Chat" image="message.fill" catalog="system" id="pOh-cc-NZ2"/>
+                    <tabBarItem key="tabBarItem" title="Chat" image="ic_chat" id="pOh-cc-NZ2"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="cGu-81-XUM">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -274,7 +274,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="ic_chat" width="20" height="20"/>
         <image name="image" width="1283" height="1276"/>
-        <image name="message.fill" catalog="system" width="64" height="56"/>
     </resources>
 </document>
