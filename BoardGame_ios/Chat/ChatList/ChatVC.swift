@@ -9,16 +9,16 @@
 import UIKit
 
 class ChatVC: UIViewController, UITableViewDataSource {
+    @IBOutlet weak var segmentControl: UISegmentedControl!
+    @IBOutlet weak var listTableView: UITableView!
+    
     // 建立假資料_使用者id、好友名單
     var playerId = ""
     var friends: [Friend]?
     var groups: [Group]?
-    var image: String = ""
     var name: String = ""
     let url_server = URL(string: common_url_forChat + "ChatServlet")
     
-    @IBOutlet weak var segmentControl: UISegmentedControl!
-    @IBOutlet weak var listTableView: UITableView!
     // 實作 UITableViewDataSource
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // 除錯
@@ -44,22 +44,62 @@ class ChatVC: UIViewController, UITableViewDataSource {
         switch selectedIndex {
         case 0:
             if let friends = friends {
-                image = getFriendImage(friendId: friends[indexPath.row].friendId)
                 name = friends[indexPath.row].friendNkName
             }
         case 1:
             if let groups = groups {
-                image = getGroupImage(groupNo: groups[indexPath.row].groupNo)
                 name = groups[indexPath.row].groupName
             }
         default:
             break
         }
+        
         guard let cell = tableView.dequeueReusableCell(withIdentifier: ChatTableViewCell.cellId, for: indexPath) as? ChatTableViewCell
             else {
                 return UITableViewCell()
         }
-        cell.chatListImage.image = UIImage(named: image)
+        
+        
+        // 從 Server 取得頭像
+        var image: UIImage?
+        
+        var requestParam = [String: Any]()
+        requestParam["action"] = "getImage"
+        requestParam["playerId"] = playerId
+        requestParam["imageSize"] = 60
+        switch selectedIndex {
+        case 0:
+            if let friends = friends {
+                requestParam["idType"] = "String"
+                requestParam["imageId"] = friends[indexPath.row].friendId
+            }
+        case 1:
+            if let groups = groups {
+                requestParam["idType"] = "int"
+                requestParam["imageId"] = groups[indexPath.row].groupNo
+            }
+        default:
+            break
+        }
+        executeTask(url_server!, requestParam) { (data, response, error) in
+            // 除錯
+            print("getImage_executeTask")
+            if error == nil {
+                if data != nil {
+                    // Server儲存的圖片
+                    image = UIImage(data: data!)
+                }
+                if image == nil {
+                    // 預設圖片
+                    image = UIImage(named: "portrait_default")
+                }
+                DispatchQueue.main.async { cell.chatListImage.image = image }
+            } else {
+                print(error!.localizedDescription)
+            }
+        }
+        
+        
         cell.chatListName.text = name
         return cell
     }
@@ -70,31 +110,31 @@ class ChatVC: UIViewController, UITableViewDataSource {
         super.viewDidLoad()
         // 除錯
         print("viewDidLoad")
-        // Do any additional setup after loading the view.
-        // 建立假資料，玩家Id
+        // 建立假資料，玩家Id -> 在登入時存入
         saveUserDefaults("playerId", "chengchi1223")
         // 取用 UserDefaults 的玩家 id
         playerId = loadUserDefaults("playerId")
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
         // 除錯
         print("viewWillAppear")
+        
+        // 顯示Tab Bar
+        self.tabBarController?.tabBar.isHidden = false
         updateChatList()
         
         // 將已選取的cell取消選取（取消灰底）
         if let row = listTableView.indexPathForSelectedRow {
             listTableView.deselectRow(at: row, animated: true)
         }
-        
     }
     
     @IBAction func segmentControlValueChanged(_ sender: UISegmentedControl) {
         // 除錯
         print("segmentControlValueChanged")
         updateChatList()
-        listTableView.reloadData()
     }
     
     func updateChatList() {
@@ -156,38 +196,6 @@ class ChatVC: UIViewController, UITableViewDataSource {
         default:
             break
         }
-    }
-    
-    // 圖檔假資料 -> 開執行緒取得圖片
-    func getFriendImage(friendId: String) -> String {
-        // 除錯
-        print("getFriendImage")
-        var imageStr = ""
-        switch friendId {
-        case "jerry1124":
-            imageStr = "BG01"
-        case "gerfarn0523":
-            imageStr = "BG02"
-        default:
-            break
-        }
-        return imageStr
-    }
-    
-    // 圖檔假資料 -> 開執行緒取得圖片
-    func getGroupImage(groupNo: Int) -> String {
-        // 除錯
-        print("getGroupImage")
-        var imageStr = ""
-        switch groupNo {
-        case 1:
-            imageStr = "image"
-        case 2:
-            imageStr = "portrait_default"
-        default:
-            break
-        }
-        return imageStr
     }
 }
 

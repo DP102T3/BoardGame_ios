@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--ChatVC-->
+        <!--ChatList-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController storyboardIdentifier="ChatList" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="ChatVC" customModule="BoardGame_ios" customModuleProvider="target" sceneMemberID="viewController">
@@ -38,7 +38,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image" translatesAutoresizingMaskIntoConstraints="NO" id="9Q6-5x-6p8">
-                                                    <rect key="frame" x="8" y="8" width="60" height="60.5"/>
+                                                    <rect key="frame" x="8" y="8" width="60" height="60"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="60" id="P8x-cQ-c2w"/>
                                                         <constraint firstAttribute="width" constant="60" id="dbK-4j-8Lj"/>
@@ -88,7 +88,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="CiY-SQ-Nnu">
+                    <navigationItem key="navigationItem" title="ChatList" id="CiY-SQ-Nnu">
                         <barButtonItem key="rightBarButtonItem" title="Item" id="a5Y-Ti-gJZ"/>
                     </navigationItem>
                     <connections>
@@ -100,7 +100,7 @@
             </objects>
             <point key="canvasLocation" x="2868.115942028986" y="118.52678571428571"/>
         </scene>
-        <!--MsgVC-->
+        <!--FriendNkName / GroupName-->
         <scene sceneID="950-Lf-gtp">
             <objects>
                 <viewController id="fMQ-tb-eHv" customClass="MsgVC" customModule="BoardGame_ios" customModuleProvider="target" sceneMemberID="viewController">
@@ -218,15 +218,18 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <state key="normal" title="Send"/>
+                                        <connections>
+                                            <action selector="onSendClick:" destination="fMQ-tb-eHv" eventType="touchUpInside" id="H1E-8P-gcv"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
-                                    <constraint firstItem="ARG-aC-B8l" firstAttribute="centerY" secondItem="pck-iS-KI7" secondAttribute="centerY" id="5Mr-SV-EGX"/>
                                     <constraint firstAttribute="trailing" secondItem="ARG-aC-B8l" secondAttribute="trailing" constant="8" id="JYh-lk-xai"/>
                                     <constraint firstItem="bLy-Uu-Sey" firstAttribute="top" secondItem="pck-iS-KI7" secondAttribute="top" constant="8" id="KiH-L1-r6d"/>
                                     <constraint firstItem="ARG-aC-B8l" firstAttribute="leading" secondItem="bLy-Uu-Sey" secondAttribute="trailing" constant="8" id="S06-2D-Adu"/>
                                     <constraint firstAttribute="height" constant="52" id="alf-bM-xWD"/>
+                                    <constraint firstItem="ARG-aC-B8l" firstAttribute="centerY" secondItem="pck-iS-KI7" secondAttribute="centerY" id="d9J-Zs-TZE"/>
                                     <constraint firstAttribute="bottom" secondItem="bLy-Uu-Sey" secondAttribute="bottom" constant="8" id="pPH-cz-04d"/>
                                     <constraint firstItem="bLy-Uu-Sey" firstAttribute="leading" secondItem="pck-iS-KI7" secondAttribute="leading" constant="8" id="zjx-C6-CRX"/>
                                 </constraints>
@@ -239,16 +242,12 @@
                             <constraint firstItem="pck-iS-KI7" firstAttribute="top" secondItem="s92-8F-ebe" secondAttribute="bottom" id="4jY-2P-aYH"/>
                             <constraint firstItem="e5f-iZ-65y" firstAttribute="bottom" secondItem="pck-iS-KI7" secondAttribute="bottom" id="5Hm-At-B3V"/>
                             <constraint firstItem="e5f-iZ-65y" firstAttribute="trailing" secondItem="pck-iS-KI7" secondAttribute="trailing" id="Jyr-hG-fRI"/>
-                            <constraint firstItem="s92-8F-ebe" firstAttribute="centerX" secondItem="e5f-iZ-65y" secondAttribute="centerX" id="iB8-Xf-G1E"/>
                             <constraint firstItem="s92-8F-ebe" firstAttribute="leading" secondItem="e5f-iZ-65y" secondAttribute="leading" id="tvk-zc-u9N"/>
                             <constraint firstItem="e5f-iZ-65y" firstAttribute="trailing" secondItem="s92-8F-ebe" secondAttribute="trailing" id="uBf-HH-Cki"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="e5f-iZ-65y"/>
                     </view>
-                    <navigationItem key="navigationItem" id="TFk-Rd-of2"/>
-                    <connections>
-                        <outlet property="onSendClicked" destination="ARG-aC-B8l" id="Ff0-GZ-njc"/>
-                    </connections>
+                    <navigationItem key="navigationItem" title="FriendNkName / GroupName" id="TFk-Rd-of2"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZvH-aB-ZMw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
