@@ -21,8 +21,6 @@ class ChatVC: UIViewController, UITableViewDataSource {
     
     // 實作 UITableViewDataSource
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // 除錯
-        print("tableView_1")
         var inputNum = 0
         let selectedIndex = segmentControl.selectedSegmentIndex
         switch selectedIndex {
@@ -38,8 +36,6 @@ class ChatVC: UIViewController, UITableViewDataSource {
     
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        // 除錯
-        print("tableView_2")
         let selectedIndex = segmentControl.selectedSegmentIndex
         switch selectedIndex {
         case 0:
@@ -82,8 +78,6 @@ class ChatVC: UIViewController, UITableViewDataSource {
             break
         }
         executeTask(url_server!, requestParam) { (data, response, error) in
-            // 除錯
-            print("getImage_executeTask")
             if error == nil {
                 if data != nil {
                     // Server儲存的圖片
@@ -108,8 +102,6 @@ class ChatVC: UIViewController, UITableViewDataSource {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // 除錯
-        print("viewDidLoad")
         // 建立假資料，玩家Id -> 在登入時存入
         saveUserDefaults("playerId", "chengchi1223")
         // 取用 UserDefaults 的玩家 id
@@ -118,9 +110,6 @@ class ChatVC: UIViewController, UITableViewDataSource {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        // 除錯
-        print("viewWillAppear")
-        
         // 顯示Tab Bar
         self.tabBarController?.tabBar.isHidden = false
         updateChatList()
@@ -132,14 +121,10 @@ class ChatVC: UIViewController, UITableViewDataSource {
     }
     
     @IBAction func segmentControlValueChanged(_ sender: UISegmentedControl) {
-        // 除錯
-        print("segmentControlValueChanged")
         updateChatList()
     }
     
     func updateChatList() {
-        // 除錯
-        print("updateChatList")
         // 好友/揪團假資料 -> 連接Servlet取得 好友/已參團 清單
         let selectedIndex = segmentControl.selectedSegmentIndex
         switch selectedIndex {
@@ -196,6 +181,32 @@ class ChatVC: UIViewController, UITableViewDataSource {
         default:
             break
         }
+    }
+    
+    /* 因為拉UITableViewCell與detail頁面連結，所以sender是UITableViewCell */
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+            let indexPath = self.listTableView.indexPathForSelectedRow
+            let MsgVC = segue.destination as! MsgVC
+
+            let selectedIndex = segmentControl.selectedSegmentIndex
+            switch selectedIndex {
+            case 0:
+                var friend: Friend?
+                if let friends = self.friends {
+                    friend = friends[indexPath!.row]
+                    MsgVC.friend = friend
+                    MsgVC.state = 0
+                }
+            case 1:
+                var group: Group?
+                if let groups = self.groups {
+                    group = groups[indexPath!.row]
+                    MsgVC.group = group
+                    MsgVC.state = 1
+                }
+            default:
+                break
+            }
     }
 }
 
