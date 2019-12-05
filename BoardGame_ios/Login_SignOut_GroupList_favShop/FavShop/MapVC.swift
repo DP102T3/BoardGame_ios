@@ -11,16 +11,20 @@ import MapKit
 
 class MapVC: UIViewController , MKMapViewDelegate {
     @IBOutlet weak var mapView: MKMapView!
+    
+    var latitude: Double?
+    var longitude: Double?
     var favshop: ShopData!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = favshop.shopName
-        setupMap();
+        geocoder()
+        setupMap()
     }
     
     func setMapRegion() {
-        let span = MKCoordinateSpan(latitudeDelta: 1, longitudeDelta: 1)
+        let span = MKCoordinateSpan(latitudeDelta: 0.2, longitudeDelta: 0.2)
         var region = MKCoordinateRegion()
         region.span = span
         mapView.setRegion(region, animated: true)
@@ -31,7 +35,7 @@ class MapVC: UIViewController , MKMapViewDelegate {
         mapView.delegate = self
         setMapRegion()
         let annotation = MKPointAnnotation()
-        let coordinate = CLLocationCoordinate2D(latitude: favshop.latitude!, longitude: favshop.longitude!)
+        let coordinate = CLLocationCoordinate2D(latitude: latitude ?? 0, longitude: longitude ?? 0)
         annotation.coordinate = coordinate
         annotation.title = "\(favshop.shopName))"
         annotation.subtitle = favshop.address
@@ -51,20 +55,6 @@ class MapVC: UIViewController , MKMapViewDelegate {
         return annotationView
     }
     
-    func geocoder(){
-        let geocoder = CLGeocoder()
-        geocoder.geocodeAddressString(favshop.address) { (placemarks, error) in
-            if placemarks != nil && placemarks!.count > 0 {
-                if let placemark = placemarks!.first {
-                    let location = placemark.location!
-                    self.setMapCenter(center: location.coordinate)
-                    self.setMapAnnotation(location)
-                }
-            }
-        }
-        
-    }
-    
     func setMapCenter(center: CLLocationCoordinate2D) {
         mapView.setCenter(center, animated: true)
     }
@@ -74,7 +64,24 @@ class MapVC: UIViewController , MKMapViewDelegate {
         let annotation = MKPointAnnotation()
         annotation.coordinate = coordinate
         annotation.title = favshop.shopName
-        annotation.subtitle = "(\(coordinate.latitude), \(coordinate.longitude))"
+        annotation.subtitle = favshop.address
         mapView.addAnnotation(annotation)
+    }
+    
+    func geocoder(){
+        let geocoder = CLGeocoder()
+        geocoder.geocodeAddressString(favshop.address) { (placemarks, error) in
+            if placemarks != nil && placemarks!.count > 0 {
+                if let placemark = placemarks!.first {
+                    let location = placemark.location!
+                    self.latitude = location.coordinate.latitude
+                    self.longitude = location.coordinate.longitude
+                    print("latitude:\(String(describing: self.latitude ?? 0)),longitude:\(self.longitude ?? 0)")
+                    self.setMapCenter(center: location.coordinate)
+                    self.setMapAnnotation(location)
+                }
+            }
+        }
+        
     }
 }
