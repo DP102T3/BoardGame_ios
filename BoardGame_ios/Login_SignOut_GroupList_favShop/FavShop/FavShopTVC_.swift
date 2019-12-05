@@ -1,15 +1,10 @@
 import UIKit
 
 class FavShopTVC_: UITableViewController, FavShopVCCellDelegate {
-    var shop = ShopData.init(0, "", "", 0.0)
-    
-    func favShopVCCellOnClick(_ sender: FavShopCell) {
-        _ = self.tableView.indexPath(for: sender)
-        print("indexPath")
-    }
     
     @IBOutlet var favTableView: UITableView!
-    
+    var shop = ShopData.init(0, "", "", 0.0)
+    var indexPath: IndexPath?
     var favShopData = [ShopData]()
     let url_server = URL(string: common_url + "FavShopServlet")
     
@@ -71,7 +66,6 @@ class FavShopTVC_: UITableViewController, FavShopVCCellDelegate {
         let favShopCell = tableView.dequeueReusableCell(withIdentifier: cellId,for: indexPath) as! FavShopCell
         
         shop = favShopData[indexPath.row]
-        
         favShopCell.delegate = self
         
         //尚未取得圖片，另外開啟task請求
@@ -101,7 +95,12 @@ class FavShopTVC_: UITableViewController, FavShopVCCellDelegate {
         return favShopCell
     }
     
+    func favShopVCCellOnClick(_ sender: FavShopCell) {
+        indexPath = self.tableView.indexPath(for: sender)
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+            let shop = favShopData[indexPath!.row]
             let detailVC = segue.destination as! MapVC
             detailVC.favshop = shop
     }

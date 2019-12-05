@@ -18,6 +18,7 @@ class MapVC: UIViewController , MKMapViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        print(favshop.shopName)
         self.title = favshop.shopName
         geocoder()
         setupMap()
@@ -76,7 +77,6 @@ class MapVC: UIViewController , MKMapViewDelegate {
                     let location = placemark.location!
                     self.latitude = location.coordinate.latitude
                     self.longitude = location.coordinate.longitude
-                    print("latitude:\(String(describing: self.latitude ?? 0)),longitude:\(self.longitude ?? 0)")
                     self.setMapCenter(center: location.coordinate)
                     self.setMapAnnotation(location)
                 }

@@ -437,11 +437,11 @@
                                     <action selector="SegmentedAction:" destination="eWG-6d-wuB" eventType="valueChanged" id="P9i-8G-1r6"/>
                                 </connections>
                             </segmentedControl>
-                            <containerView opaque="NO" contentMode="scaleToFill" id="ORZ-r5-pXs" userLabel="FavShopContainer View">
+                            <containerView opaque="NO" contentMode="scaleToFill" id="Xu5-BF-Jqu" userLabel="PersonContainer View">
                                 <rect key="frame" x="0.0" y="122" width="414" height="774"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <connections>
-                                    <segue destination="kfR-Y6-Fsr" kind="embed" id="qNX-gi-XxF"/>
+                                    <segue destination="DZR-au-VBA" kind="embed" id="7PI-SQ-BEn"/>
                                 </connections>
                             </containerView>
                             <containerView opaque="NO" contentMode="scaleToFill" id="p8K-RF-i5I" userLabel="GroupContainer View">
@@ -451,11 +451,11 @@
                                     <segue destination="VJt-iY-PND" kind="embed" id="CLB-LW-n4z"/>
                                 </connections>
                             </containerView>
-                            <containerView opaque="NO" contentMode="scaleToFill" id="Xu5-BF-Jqu" userLabel="PersonContainer View">
+                            <containerView opaque="NO" contentMode="scaleToFill" id="ORZ-r5-pXs" userLabel="FavShopContainer View">
                                 <rect key="frame" x="0.0" y="122" width="414" height="774"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <connections>
-                                    <segue destination="DZR-au-VBA" kind="embed" id="7PI-SQ-BEn"/>
+                                    <segue destination="kfR-Y6-Fsr" kind="embed" id="qNX-gi-XxF"/>
                                 </connections>
                             </containerView>
                         </subviews>
@@ -526,7 +526,7 @@
                                                     <state key="normal" title="Button" image="map.fill" catalog="system"/>
                                                     <connections>
                                                         <action selector="openMap:" destination="zft-t7-mrB" eventType="touchUpInside" id="oWx-Hi-qoi"/>
-                                                        <segue destination="I7q-3V-J16" kind="presentation" id="7Cc-JV-HUc"/>
+                                                        <segue destination="I7q-3V-J16" kind="show" id="sv7-xD-KQo"/>
                                                     </connections>
                                                 </button>
                                             </subviews>

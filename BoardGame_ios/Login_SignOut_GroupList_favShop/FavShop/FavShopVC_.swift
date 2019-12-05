@@ -9,21 +9,28 @@
 import UIKit
 
 class FavShopVC_: UIViewController {
-    var favShopDataList = [ShopData]()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view.
+        self.children[0].view.isHidden = false
+        self.children[1].view.isHidden = true
+        self.children[2].view.isHidden = true
+    }
 
     @IBAction func SegmentedAction(_ sender: UISegmentedControl) {
-        let selectedIndex = sender.selectedSegmentIndex
-        if selectedIndex == 0 {
-            favShopDataList.removeAll()
-            
-            let resultvc = storyboard?.instantiateViewController(withIdentifier: "PersonSB")
-            present(resultvc! , animated: true)
-        }else if selectedIndex == 1{
-            let resultvc = storyboard?.instantiateViewController(withIdentifier: "GroupSB")
-            present(resultvc! , animated: true)
-        }else{
-            let resultvc = storyboard?.instantiateViewController(withIdentifier: "FavShopSB")
-            present(resultvc! , animated: true)
+        if sender.selectedSegmentIndex == 0 {
+            self.children[0].view.isHidden = false
+            self.children[1].view.isHidden = true
+            self.children[2].view.isHidden = true
+        } else if sender.selectedSegmentIndex == 1 {
+            self.children[0].view.isHidden = true
+            self.children[1].view.isHidden = false
+            self.children[2].view.isHidden = true
+        } else {
+            self.children[0].view.isHidden = true
+            self.children[1].view.isHidden = true
+            self.children[2].view.isHidden = false
         }
     }
 }
