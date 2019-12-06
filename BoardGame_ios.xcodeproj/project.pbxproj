@@ -152,14 +152,14 @@
 			path = Register;
 			sourceTree = "<group>";
 		};
-		E30DFA112398DE770081BC48 /* GroupList */ = {
+		E30DFA112398DE770081BC48 /* FavGroupList */ = {
 			isa = PBXGroup;
 			children = (
 				E30DFA122398DE8B0081BC48 /* GroupCell.swift */,
 				E30DFA142398DEA30081BC48 /* GroupListTVC.swift */,
 				E30DFA162398DEB30081BC48 /* GroupData.swift */,
 			);
-			path = GroupList;
+			path = FavGroupList;
 			sourceTree = "<group>";
 		};
 		E39ACAF8238E1971000973E3 = {
@@ -202,7 +202,7 @@
 		E39ACB1E238E4647000973E3 /* Login_SignOut_GroupList_favShop */ = {
 			isa = PBXGroup;
 			children = (
-				E30DFA112398DE770081BC48 /* GroupList */,
+				E30DFA112398DE770081BC48 /* FavGroupList */,
 				E39ACBBA238FE827000973E3 /* FavShop */,
 				E39ACB23238EA42F000973E3 /* Login */,
 				E39ACB24238EA523000973E3 /* SignOutTVC.swift */,

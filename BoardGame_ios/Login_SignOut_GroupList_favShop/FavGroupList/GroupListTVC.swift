@@ -28,6 +28,7 @@ class GroupListTVC: UITableViewController {
     }
     
     @objc func showAllFavGroup() {
+        print("showAllFavGroup()")
         var requestParam = [String: String]()
         requestParam["action"] = "getAllFavGroup"
         requestParam["player_id"] = "chengchi1223"
@@ -35,10 +36,11 @@ class GroupListTVC: UITableViewController {
             if error == nil {
                 if data != nil {
                     // 將輸入資料列印出來除錯用
-                    print("input: \(String(data: data!, encoding: .utf8)!)")
+                    print("groupInput: \(String(data: data!, encoding: .utf8)!)")
                     
                     if let result = try? JSONDecoder().decode([GroupData].self, from: data!) {
                         self.favGroupData = result
+                        print("favGroupData")
                         DispatchQueue.main.async {
                             if let control = self.tableView.refreshControl {
                                 if control.isRefreshing {
@@ -59,8 +61,9 @@ class GroupListTVC: UITableViewController {
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        print("GroupTableView count")
+        print("GroupCount:\(favGroupData.count)")
         return favGroupData.count
+        
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath:
@@ -75,14 +78,16 @@ class GroupListTVC: UITableViewController {
         
         //尚未取得圖片，另外開啟task請求
         var requestParam = [String: Any]()
-        requestParam["action"] = "getImage"
-        requestParam["shop_id"] = group.group_no
+        requestParam["action"] = "getGroupImage"
+        requestParam["group_no"] = group.group_no
         // 圖片寬度為tableViewCell的1/4，ImageView的寬度也建議在storyboard加上比例設定的constraint
         requestParam["imageSize"] = favGroupCell.frame.width / 4
         var image: UIImage?
         executeTask(url_server!, requestParam) { (data, response, error) in
+            print(requestParam)
             if error == nil {
                 if data != nil {
+                    print("GroupImageInput: \(data!))")
                     image = UIImage(data: data!)
                 }
                 if image == nil {
@@ -94,11 +99,12 @@ class GroupListTVC: UITableViewController {
             }
         }
         
-        favGroupCell.lbGroupName.text = group.group_Name
+        favGroupCell.lbGroupName.text = group.group_name
         
         //判斷店家是否同意丟訂位
         var check: String?
         let checkNumber = group.group_check
+        
         if checkNumber == 0{
             check = "店家未審核"
         }else if checkNumber == 1{
@@ -106,25 +112,10 @@ class GroupListTVC: UITableViewController {
         }else {
             check = "店家駁回"
         }
-
-        favGroupCell.lbCheck.text = check
         
-
-        let long_time = formateTime(timeStamp: group.long_time)
-        favGroupCell.lbTime.text = long_time.description
+        favGroupCell.lbCheck.text = check
+        favGroupCell.lbTime.text = group.setup_time
         return favGroupCell
     }
-
     
-    func formateTime(timeStamp: CLong)->(NSDate){
-        let nowDate = NSDate(timeIntervalSinceNow: 0)
-        // 時間戳的值
-        let timeStamp:CLong = CLong(nowDate.timeIntervalSince1970)
-        print(timeStamp)
-        //把時間戳轉換為時間
-        let confromTimestampDate = NSDate.init(timeIntervalSince1970: TimeInterval(timeStamp))
-        print(confromTimestampDate)
-
-        return confromTimestampDate
-    }
 }
