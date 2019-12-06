@@ -12,6 +12,5 @@ class GroupCell: UITableViewCell {
     @IBOutlet weak var ivGroup: UIImageView!
     @IBOutlet weak var lbGroupName: UILabel!
     @IBOutlet weak var lbCheck: UILabel!
-    @IBOutlet weak var lbSucces: UILabel!
     @IBOutlet weak var lbTime: UILabel!
 }
