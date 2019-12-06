@@ -14,13 +14,13 @@ class GroupListTVC: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableViewAddRefreshControl()
+        groupTableViewAddRefreshControl()
         showAllFavGroup()
         print("GroupViewDidLoad")
     }
     
     /** tableView加上下拉更新功能 */
-    func tableViewAddRefreshControl() {
+    func groupTableViewAddRefreshControl() {
         let refreshControl = UIRefreshControl()
         refreshControl.attributedTitle = NSAttributedString(string: "Pull to refresh")
         refreshControl.addTarget(self, action: #selector(showAllFavGroup), for: .valueChanged)
@@ -63,9 +63,11 @@ class GroupListTVC: UITableViewController {
         return favGroupData.count
     }
     
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath:
+        IndexPath) -> UITableViewCell {
         print("GroupCellForRowAt")
-        let cellId = "favGroup"
+        
+        let cellId = "GroupCell"
         // tableViewCell預設的imageView點擊後會改變尺寸，所以建立UITableViewCell子類別SpotCell
         let favGroupCell = tableView.dequeueReusableCell(withIdentifier: cellId,for: indexPath) as! GroupCell
         
@@ -104,12 +106,12 @@ class GroupListTVC: UITableViewController {
         }else {
             check = "店家駁回"
         }
-        
+
         favGroupCell.lbCheck.text = check
         
-//
-//        let long_time = formateTime(timeStamp: group.long_time)
-//        favGroupCell.lbTime.text = long_time.description
+
+        let long_time = formateTime(timeStamp: group.long_time)
+        favGroupCell.lbTime.text = long_time.description
         return favGroupCell
     }
 
@@ -122,7 +124,7 @@ class GroupListTVC: UITableViewController {
         //把時間戳轉換為時間
         let confromTimestampDate = NSDate.init(timeIntervalSince1970: TimeInterval(timeStamp))
         print(confromTimestampDate)
-        
+
         return confromTimestampDate
     }
 }

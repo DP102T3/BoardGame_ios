@@ -402,7 +402,7 @@
         <!--Navigation Controller-->
         <scene sceneID="FCB-X6-psn">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Njv-Lh-XOk" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="a" automaticallyAdjustsScrollViewInsets="NO" id="Njv-Lh-XOk" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="OQK-a3-0LN">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
