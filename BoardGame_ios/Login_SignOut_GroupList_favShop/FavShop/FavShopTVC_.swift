@@ -6,7 +6,7 @@ class FavShopTVC_: UITableViewController, FavShopVCCellDelegate {
     var shop = ShopData.init(0, "", "", 0.0)
     var indexPath: IndexPath?
     var favShopData = [ShopData]()
-    let url_server = URL(string: common_url + "FavShopServlet")
+    let url_server = URL(string: common_url + "FavServlet")
     
     override func viewDidLoad() {
         super.viewDidLoad()

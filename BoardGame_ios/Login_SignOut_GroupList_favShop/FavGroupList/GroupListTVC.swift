@@ -10,7 +10,7 @@ import UIKit
 
 class GroupListTVC: UITableViewController {
     var favGroupData = [GroupData]()
-    let url_server = URL(string: common_url + "FavShopServlet")
+    let url_server = URL(string: common_url + "FavServlet")
     
     override func viewDidLoad() {
         super.viewDidLoad()
