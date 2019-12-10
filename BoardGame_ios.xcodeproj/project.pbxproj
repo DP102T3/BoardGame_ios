@@ -16,13 +16,17 @@
 		C492EE8023964C53000AB2D9 /* ChatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C492EE7D23964C53000AB2D9 /* ChatTableViewCell.swift */; };
 		C492EE8123964C53000AB2D9 /* ChatVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C492EE7B23964C53000AB2D9 /* ChatVC.swift */; };
 		C492EE8223964C53000AB2D9 /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = C492EE7E23964C53000AB2D9 /* Group.swift */; };
-		D004D7522397AC050018014A /* Friend.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D004D74D2397AC050018014A /* Friend.storyboard */; };
-		D004D7532397AC050018014A /* FriendHomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D004D74E2397AC050018014A /* FriendHomeVC.swift */; };
-		D004D7562397B32A0018014A /* FriendAllVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D004D7552397B32A0018014A /* FriendAllVC.swift */; };
-		D004D7582397B3400018014A /* FriendInvitedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D004D7572397B3400018014A /* FriendInvitedVC.swift */; };
-		D004D75A2397B3510018014A /* FriendInvitingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D004D7592397B3510018014A /* FriendInvitingVC.swift */; };
-		D01FA19C23974CB10054A79B /* RegisterHomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01FA19B23974CB10054A79B /* RegisterHomeVC.swift */; };
-		D01FA19E23974CC80054A79B /* RegisterDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01FA19D23974CC80054A79B /* RegisterDetailVC.swift */; };
+		D039CD10239EDA16007EA728 /* FriendInvitingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D039CD07239EDA16007EA728 /* FriendInvitingCell.swift */; };
+		D039CD11239EDA16007EA728 /* Friend.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D039CD08239EDA16007EA728 /* Friend.storyboard */; };
+		D039CD12239EDA16007EA728 /* FriendInvitingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D039CD09239EDA16007EA728 /* FriendInvitingVC.swift */; };
+		D039CD13239EDA16007EA728 /* FriendInvitedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D039CD0A239EDA16007EA728 /* FriendInvitedCell.swift */; };
+		D039CD14239EDA16007EA728 /* FriendAllVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D039CD0B239EDA16007EA728 /* FriendAllVC.swift */; };
+		D039CD15239EDA16007EA728 /* FriendInvitedDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D039CD0C239EDA16007EA728 /* FriendInvitedDelegate.swift */; };
+		D039CD16239EDA16007EA728 /* FriendHomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D039CD0D239EDA16007EA728 /* FriendHomeVC.swift */; };
+		D039CD17239EDA16007EA728 /* FriendInvitedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D039CD0E239EDA16007EA728 /* FriendInvitedVC.swift */; };
+		D039CD18239EDA16007EA728 /* FriendInvitingDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D039CD0F239EDA16007EA728 /* FriendInvitingDelegate.swift */; };
+		D039CD1B239EDA65007EA728 /* RegisterDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D039CD19239EDA65007EA728 /* RegisterDetailVC.swift */; };
+		D039CD1C239EDA65007EA728 /* RegisterHomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D039CD1A239EDA65007EA728 /* RegisterHomeVC.swift */; };
 		E30DFA0E2398DE0F0081BC48 /* FavShopVC_.swift in Sources */ = {isa = PBXBuildFile; fileRef = E30DFA0D2398DE0F0081BC48 /* FavShopVC_.swift */; };
 		E30DFA102398DE480081BC48 /* FavShopTVC_.swift in Sources */ = {isa = PBXBuildFile; fileRef = E30DFA0F2398DE480081BC48 /* FavShopTVC_.swift */; };
 		E30DFA132398DE8B0081BC48 /* GroupCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E30DFA122398DE8B0081BC48 /* GroupCell.swift */; };
@@ -58,13 +62,17 @@
 		C492EE7C23964C53000AB2D9 /* Friend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Friend.swift; sourceTree = "<group>"; };
 		C492EE7D23964C53000AB2D9 /* ChatTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatTableViewCell.swift; sourceTree = "<group>"; };
 		C492EE7E23964C53000AB2D9 /* Group.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
-		D004D74D2397AC050018014A /* Friend.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Friend.storyboard; sourceTree = "<group>"; };
-		D004D74E2397AC050018014A /* FriendHomeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendHomeVC.swift; sourceTree = "<group>"; };
-		D004D7552397B32A0018014A /* FriendAllVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendAllVC.swift; sourceTree = "<group>"; };
-		D004D7572397B3400018014A /* FriendInvitedVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendInvitedVC.swift; sourceTree = "<group>"; };
-		D004D7592397B3510018014A /* FriendInvitingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendInvitingVC.swift; sourceTree = "<group>"; };
-		D01FA19B23974CB10054A79B /* RegisterHomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterHomeVC.swift; sourceTree = "<group>"; };
-		D01FA19D23974CC80054A79B /* RegisterDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterDetailVC.swift; sourceTree = "<group>"; };
+		D039CD07239EDA16007EA728 /* FriendInvitingCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendInvitingCell.swift; sourceTree = "<group>"; };
+		D039CD08239EDA16007EA728 /* Friend.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Friend.storyboard; path = "../../../../Desktop/BoardGame_ios 2/BoardGame_ios/Friend/Friend.storyboard"; sourceTree = "<group>"; };
+		D039CD09239EDA16007EA728 /* FriendInvitingVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FriendInvitingVC.swift; path = "../../../../Desktop/BoardGame_ios 2/BoardGame_ios/Friend/FriendInvitingVC.swift"; sourceTree = "<group>"; };
+		D039CD0A239EDA16007EA728 /* FriendInvitedCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendInvitedCell.swift; sourceTree = "<group>"; };
+		D039CD0B239EDA16007EA728 /* FriendAllVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FriendAllVC.swift; path = "../../../../Desktop/BoardGame_ios 2/BoardGame_ios/Friend/FriendAllVC.swift"; sourceTree = "<group>"; };
+		D039CD0C239EDA16007EA728 /* FriendInvitedDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendInvitedDelegate.swift; sourceTree = "<group>"; };
+		D039CD0D239EDA16007EA728 /* FriendHomeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FriendHomeVC.swift; path = "../../../../Desktop/BoardGame_ios 2/BoardGame_ios/Friend/FriendHomeVC.swift"; sourceTree = "<group>"; };
+		D039CD0E239EDA16007EA728 /* FriendInvitedVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FriendInvitedVC.swift; path = "../../../../Desktop/BoardGame_ios 2/BoardGame_ios/Friend/FriendInvitedVC.swift"; sourceTree = "<group>"; };
+		D039CD0F239EDA16007EA728 /* FriendInvitingDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendInvitingDelegate.swift; sourceTree = "<group>"; };
+		D039CD19239EDA65007EA728 /* RegisterDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RegisterDetailVC.swift; path = "../../../../Desktop/BoardGame_ios 2/BoardGame_ios/Register/RegisterDetailVC.swift"; sourceTree = "<group>"; };
+		D039CD1A239EDA65007EA728 /* RegisterHomeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RegisterHomeVC.swift; path = "../../../../Desktop/BoardGame_ios 2/BoardGame_ios/Register/RegisterHomeVC.swift"; sourceTree = "<group>"; };
 		E30DFA0D2398DE0F0081BC48 /* FavShopVC_.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavShopVC_.swift; sourceTree = "<group>"; };
 		E30DFA0F2398DE480081BC48 /* FavShopTVC_.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavShopTVC_.swift; sourceTree = "<group>"; };
 		E30DFA122398DE8B0081BC48 /* GroupCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupCell.swift; sourceTree = "<group>"; };
@@ -140,11 +148,15 @@
 		D004D74A2397AC050018014A /* Friend */ = {
 			isa = PBXGroup;
 			children = (
-				D004D74D2397AC050018014A /* Friend.storyboard */,
-				D004D74E2397AC050018014A /* FriendHomeVC.swift */,
-				D004D7552397B32A0018014A /* FriendAllVC.swift */,
-				D004D7572397B3400018014A /* FriendInvitedVC.swift */,
-				D004D7592397B3510018014A /* FriendInvitingVC.swift */,
+				D039CD08239EDA16007EA728 /* Friend.storyboard */,
+				D039CD0D239EDA16007EA728 /* FriendHomeVC.swift */,
+				D039CD0B239EDA16007EA728 /* FriendAllVC.swift */,
+				D039CD0A239EDA16007EA728 /* FriendInvitedCell.swift */,
+				D039CD0E239EDA16007EA728 /* FriendInvitedVC.swift */,
+				D039CD09239EDA16007EA728 /* FriendInvitingVC.swift */,
+				D039CD07239EDA16007EA728 /* FriendInvitingCell.swift */,
+				D039CD0C239EDA16007EA728 /* FriendInvitedDelegate.swift */,
+				D039CD0F239EDA16007EA728 /* FriendInvitingDelegate.swift */,
 			);
 			path = Friend;
 			sourceTree = "<group>";
@@ -152,8 +164,8 @@
 		D0074FFE2396563E00ABFEEC /* Register */ = {
 			isa = PBXGroup;
 			children = (
-				D01FA19B23974CB10054A79B /* RegisterHomeVC.swift */,
-				D01FA19D23974CC80054A79B /* RegisterDetailVC.swift */,
+				D039CD1A239EDA65007EA728 /* RegisterHomeVC.swift */,
+				D039CD19239EDA65007EA728 /* RegisterDetailVC.swift */,
 			);
 			path = Register;
 			sourceTree = "<group>";
@@ -307,9 +319,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D039CD11239EDA16007EA728 /* Friend.storyboard in Resources */,
 				E39ACB11238E1973000973E3 /* Assets.xcassets in Resources */,
 				E39ACB0C238E1971000973E3 /* Main.storyboard in Resources */,
-				D004D7522397AC050018014A /* Friend.storyboard in Resources */,
 				C492EE6C23964AF3000AB2D9 /* Chat.storyboard in Resources */,
 				E39ACBEC2392835D000973E3 /* TPDirectResource in Resources */,
 			);
@@ -322,7 +334,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D01FA19E23974CC80054A79B /* RegisterDetailVC.swift in Sources */,
+				D039CD14239EDA16007EA728 /* FriendAllVC.swift in Sources */,
 				C492EE8223964C53000AB2D9 /* Group.swift in Sources */,
 				E39ACBC0238FED69000973E3 /* ShopData.swift in Sources */,
 				E30DFA0E2398DE0F0081BC48 /* FavShopVC_.swift in Sources */,
@@ -333,9 +345,10 @@
 				E30DFA132398DE8B0081BC48 /* GroupCell.swift in Sources */,
 				E39ACB0F238E1971000973E3 /* BoardGame_ios.xcdatamodeld in Sources */,
 				E30DFA102398DE480081BC48 /* FavShopTVC_.swift in Sources */,
+				D039CD17239EDA16007EA728 /* FriendInvitedVC.swift in Sources */,
+				D039CD12239EDA16007EA728 /* FriendInvitingVC.swift in Sources */,
 				C492EE8023964C53000AB2D9 /* ChatTableViewCell.swift in Sources */,
 				E39ACBBE238FE8A3000973E3 /* FavShopCell.swift in Sources */,
-				D004D7532397AC050018014A /* FriendHomeVC.swift in Sources */,
 				E39ACBE823920A01000973E3 /* MapVC.swift in Sources */,
 				D004D7582397B3400018014A /* FriendInvitedVC.swift in Sources */,
 				E30DFA25239FC7520081BC48 /* PlayerDataUpdate.swift in Sources */,
@@ -349,12 +362,16 @@
 				E39ACB07238E1971000973E3 /* SceneDelegate.swift in Sources */,
 				C492EE7823964C33000AB2D9 /* Msg.swift in Sources */,
 				E32E3BF32395EDB000D7AB67 /* favShopVCDelegate.swift in Sources */,
+				D039CD1C239EDA65007EA728 /* RegisterHomeVC.swift in Sources */,
 				C492EE7723964C33000AB2D9 /* MsgSendedTableViewCell.swift in Sources */,
 				E30DFA172398DEB30081BC48 /* GroupData.swift in Sources */,
 				C492EE7F23964C53000AB2D9 /* Friend.swift in Sources */,
 				E39ACBC3238FF46B000973E3 /* Common.swift in Sources */,
+				D039CD18239EDA16007EA728 /* FriendInvitingDelegate.swift in Sources */,
 				E39ACBEE23928763000973E3 /* TapPay.swift in Sources */,
 				E30DFA152398DEA30081BC48 /* GroupListTVC.swift in Sources */,
+				D039CD1B239EDA65007EA728 /* RegisterDetailVC.swift in Sources */,
+				D039CD16239EDA16007EA728 /* FriendHomeVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

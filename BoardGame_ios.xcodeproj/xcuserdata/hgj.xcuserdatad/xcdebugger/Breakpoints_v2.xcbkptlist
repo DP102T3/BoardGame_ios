@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "213A3E43-87A5-4443-B707-6BE5EA5ED1F3"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "48871F51-3E8C-42A2-9696-2703B5EAF6F6"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BoardGame_ios/Login_SignOut_GroupList_favShop/FavShop/FavShopTVC_.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "4"
+            endingLineNumber = "4"
+            landmarkName = "FavShopTVC_"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "48871F51-3E8C-42A2-9696-2703B5EAF6F6 - 745816da7e7d1a01"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BoardGame_ios.FavShopTVC_.favTableView.getter : Swift.Optional&lt;__C.UITableView&gt;"
+                  moduleName = "BoardGame_ios"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/hgj/Documents/BoardGame_ios/BoardGame_ios/Login_SignOut_GroupList_favShop/FavShop/FavShopTVC_.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "5"
+                  endingLineNumber = "5"
+                  offsetFromSymbolStart = "126">
+               </Location>
+               <Location
+                  uuid = "48871F51-3E8C-42A2-9696-2703B5EAF6F6 - c2994a27ef0137fd"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BoardGame_ios.FavShopTVC_.favTableView.setter : Swift.Optional&lt;__C.UITableView&gt;"
+                  moduleName = "BoardGame_ios"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/hgj/Documents/BoardGame_ios/BoardGame_ios/Login_SignOut_GroupList_favShop/FavShop/FavShopTVC_.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "5"
+                  endingLineNumber = "5"
+                  offsetFromSymbolStart = "160">
+               </Location>
+               <Location
+                  uuid = "48871F51-3E8C-42A2-9696-2703B5EAF6F6 - 1cff492239877d0c"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BoardGame_ios.FavShopTVC_.favTableView.modify : Swift.Optional&lt;__C.UITableView&gt;"
+                  moduleName = "BoardGame_ios"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/hgj/Documents/BoardGame_ios/BoardGame_ios/Login_SignOut_GroupList_favShop/FavShop/FavShopTVC_.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "18">
+               </Location>
+               <Location
+                  uuid = "48871F51-3E8C-42A2-9696-2703B5EAF6F6 - 6ce4df1730452645"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BoardGame_ios.FavShopTVC_.favTableView.modify : Swift.Optional&lt;__C.UITableView&gt; with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "BoardGame_ios"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/hgj/Documents/BoardGame_ios/BoardGame_ios/Login_SignOut_GroupList_favShop/FavShop/FavShopTVC_.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "5"
+                  endingLineNumber = "5"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  uuid = "48871F51-3E8C-42A2-9696-2703B5EAF6F6 - b8f79848b2191a65"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BoardGame_ios.FavShopTVC_.init(style: __C.UITableViewStyle) -&gt; BoardGame_ios.FavShopTVC_"
+                  moduleName = "BoardGame_ios"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/hgj/Documents/BoardGame_ios/BoardGame_ios/Login_SignOut_GroupList_favShop/FavShop/FavShopTVC_.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "5"
+                  endingLineNumber = "5"
+                  offsetFromSymbolStart = "211">
+               </Location>
+               <Location
+                  uuid = "48871F51-3E8C-42A2-9696-2703B5EAF6F6 - 7d701fe3040209bc"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BoardGame_ios.FavShopTVC_.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; BoardGame_ios.FavShopTVC_"
+                  moduleName = "BoardGame_ios"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/hgj/Documents/BoardGame_ios/BoardGame_ios/Login_SignOut_GroupList_favShop/FavShop/FavShopTVC_.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "5"
+                  endingLineNumber = "5"
+                  offsetFromSymbolStart = "269">
+               </Location>
+               <Location
+                  uuid = "48871F51-3E8C-42A2-9696-2703B5EAF6F6 - 6de6373feb51682f"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BoardGame_ios.FavShopTVC_.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;BoardGame_ios.FavShopTVC_&gt;"
+                  moduleName = "BoardGame_ios"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/hgj/Documents/BoardGame_ios/BoardGame_ios/Login_SignOut_GroupList_favShop/FavShop/FavShopTVC_.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "5"
+                  endingLineNumber = "5"
+                  offsetFromSymbolStart = "225">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B2553931-CC30-4033-B10E-4585602CE62D"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BoardGame_ios/Login_SignOut_GroupList_favShop/GroupList/GroupListTVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "41"
+            endingLineNumber = "41"
+            landmarkName = "showAllFavGroup()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A5EE6AAA-4B05-41F0-93D4-B4DC27EC69BA"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BoardGame_ios/Login_SignOut_GroupList_favShop/GroupList/GroupListTVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "39"
+            endingLineNumber = "39"
+            landmarkName = "showAllFavGroup()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "62D1BDC6-7ECA-4F90-9A88-D82DA9948251"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BoardGame_ios/Login_SignOut_GroupList_favShop/PlayerData/PlayerTVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "77"
+            endingLineNumber = "77"
+            landmarkName = "textLabel()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "47378758-37FE-4D6C-A3FA-BE74D69AA31D"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BoardGame_ios/Login_SignOut_GroupList_favShop/PlayerData/PlayerTVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "78"
+            endingLineNumber = "78"
+            landmarkName = "textLabel()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "EC472B02-11C4-480F-B03C-E152CC5D470B"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BoardGame_ios/Login_SignOut_GroupList_favShop/PlayerData/PlayerTVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "79"
+            endingLineNumber = "79"
+            landmarkName = "textLabel()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F8F36B0E-465D-427F-8A4B-4E5342D21C4A"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BoardGame_ios/Login_SignOut_GroupList_favShop/PlayerData/PlayerTVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "80"
+            endingLineNumber = "80"
+            landmarkName = "textLabel()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "263DB4AE-8631-46A4-A3E6-8EC10F283A09"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BoardGame_ios/Login_SignOut_GroupList_favShop/PlayerData/PlayerTVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "81"
+            endingLineNumber = "81"
+            landmarkName = "textLabel()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "1F98F702-7E48-4119-B379-EF3E61EDC355"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BoardGame_ios/Login_SignOut_GroupList_favShop/PlayerData/PlayerTVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "82"
+            endingLineNumber = "82"
+            landmarkName = "textLabel()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "152A732A-ACBE-410F-A441-A3977ECB5A6F"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BoardGame_ios/Login_SignOut_GroupList_favShop/PlayerData/PlayerTVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "83"
+            endingLineNumber = "83"
+            landmarkName = "textLabel()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "35BEEA6E-3833-426C-92E3-661EE8B8BA56"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BoardGame_ios/Login_SignOut_GroupList_favShop/PlayerData/PlayerTVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "21"
+            endingLineNumber = "21"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6055A524-0F2F-49E7-8078-0E98E0211119"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BoardGame_ios/Login_SignOut_GroupList_favShop/PlayerData/PlayerTVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "22"
+            endingLineNumber = "22"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0F56A4A7-8378-400F-9927-2BD8040135A6"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BoardGame_ios/Login_SignOut_GroupList_favShop/PlayerData/PlayerTVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "23"
+            endingLineNumber = "23"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
