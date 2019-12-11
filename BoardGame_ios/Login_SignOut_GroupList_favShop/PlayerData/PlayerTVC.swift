@@ -3,7 +3,6 @@ import UIKit
 
 class PlayerTVC: UITableViewController {
     @IBOutlet weak var ivPlayer: UIImageView!
-    @IBOutlet weak var lbPageControl: UIPageControl!
     @IBOutlet weak var lbPlayer_nkname: UILabel!
     @IBOutlet weak var lbPlayer_gender: UILabel!
     @IBOutlet weak var lbPlayer_bday: UILabel!
@@ -16,12 +15,11 @@ class PlayerTVC: UITableViewController {
     let url_server = URL(string: common_url + "FavServlet")
     static var playerData: PlayerData?
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override func viewWillAppear(_ animated: Bool) {
         showPlayerData()
         showImage()
     }
-    
+
     //取得個人資訊
     func showPlayerData() {
         var requestParam = [String: String]()
@@ -34,7 +32,6 @@ class PlayerTVC: UITableViewController {
                     print("playerInput: \(String(data: data!, encoding: .utf8)!)")
                     if let result = try? JSONDecoder().decode(PlayerData.self, from: data!){
                         PlayerTVC.self.playerData = result
-                        
                         DispatchQueue.main.async {
                             self.textLabel()
                             self.tableView.reloadData()
@@ -59,7 +56,6 @@ class PlayerTVC: UITableViewController {
             if error == nil {
                 print(requestParam)
                 if data != nil {
-                    print("ShopImageInput: \(data!)")
                     image = UIImage(data: data!)
                 }
                 if image == nil {
@@ -70,11 +66,6 @@ class PlayerTVC: UITableViewController {
                 print(error!.localizedDescription)
             }
         }
-    }
-    
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 9
     }
     
     //將servlet傳回的值放入lable顯示

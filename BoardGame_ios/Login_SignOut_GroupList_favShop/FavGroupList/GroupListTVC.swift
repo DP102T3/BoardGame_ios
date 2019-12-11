@@ -1,11 +1,3 @@
-//
-//  GroupListTVC.swift
-//  BoardGame_ios
-//
-//  Created by 黃國展 on 2019/12/5.
-//  Copyright © 2019 黃國展. All rights reserved.
-//dd
-
 import UIKit
 
 class GroupListTVC: UITableViewController {
@@ -15,8 +7,10 @@ class GroupListTVC: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         groupTableViewAddRefreshControl()
-        showAllFavGroup()
-        print("GroupViewDidLoad")
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+         showAllFavGroup()
     }
     
     /** tableView加上下拉更新功能 */
@@ -28,7 +22,6 @@ class GroupListTVC: UITableViewController {
     }
     
     @objc func showAllFavGroup() {
-        print("showAllFavGroup()")
         var requestParam = [String: String]()
         requestParam["action"] = "getAllFavGroup"
         requestParam["player_id"] = "chengchi1223"
@@ -40,7 +33,6 @@ class GroupListTVC: UITableViewController {
                     
                     if let result = try? JSONDecoder().decode([GroupData].self, from: data!) {
                         self.favGroupData = result
-                        print("favGroupData")
                         DispatchQueue.main.async {
                             if let control = self.tableView.refreshControl {
                                 if control.isRefreshing {
@@ -61,17 +53,12 @@ class GroupListTVC: UITableViewController {
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        print("GroupCount:\(favGroupData.count)")
         return favGroupData.count
-        
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath:
         IndexPath) -> UITableViewCell {
-        print("GroupCellForRowAt")
-        
         let cellId = "GroupCell"
-        // tableViewCell預設的imageView點擊後會改變尺寸，所以建立UITableViewCell子類別SpotCell
         let favGroupCell = tableView.dequeueReusableCell(withIdentifier: cellId,for: indexPath) as! GroupCell
         
         let group = favGroupData[indexPath.row]
@@ -87,7 +74,6 @@ class GroupListTVC: UITableViewController {
             print(requestParam)
             if error == nil {
                 if data != nil {
-                    print("GroupImageInput: \(data!))")
                     image = UIImage(data: data!)
                 }
                 if image == nil {
@@ -117,5 +103,4 @@ class GroupListTVC: UITableViewController {
         favGroupCell.lbTime.text = group.setup_time
         return favGroupCell
     }
-    
 }

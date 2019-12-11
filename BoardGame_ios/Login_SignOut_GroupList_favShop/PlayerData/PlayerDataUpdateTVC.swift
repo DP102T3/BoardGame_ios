@@ -25,13 +25,12 @@ class PlayerDataUpdateTVC: UITableViewController, UIImagePickerControllerDelegat
     
     override func viewDidLoad() {
         addKeyboardObserver()
-        showPlayerData()
+        //showPlayerData()
         textLabel()
     }
     
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 9
+    override func viewWillAppear(_ animated: Bool) {
+        showPlayerData()
     }
     
     @IBAction func clickTakePicture(_ sender: Any) {
@@ -82,7 +81,15 @@ class PlayerDataUpdateTVC: UITableViewController, UIImagePickerControllerDelegat
                         if let count = Int(result) {
                             DispatchQueue.main.async {
                                 // 新增成功則回前頁
-                                if count != 0 {                              self.navigationController?.popViewController(animated: true)
+                                if count != 0 {
+                                    if let controllers = self.navigationController?.viewControllers {
+                                        for vc in controllers {
+                                            if vc is FavShopVC_{
+                                                self.navigationController?.popToViewController(vc, animated: true)
+                                            }
+                                        }
+                                    }
+                                    
                                 } else {
                                     self.lbresult.text = "update fail"
                                 }
@@ -94,8 +101,8 @@ class PlayerDataUpdateTVC: UITableViewController, UIImagePickerControllerDelegat
                 print(error!.localizedDescription)
             }
         }
-    }
- 
+  }
+    
     func showPlayerData() {
         textLabel()
         // 利用spot ID去server端取對應照片
@@ -176,5 +183,13 @@ extension PlayerDataUpdateTVC {
             gender = "女性"
         }
         lbPlayer_gender.text = gender
+    }
+    
+    func showAlert(_ message: String,_ viewController: UITableViewController) {
+        let alertController = UIAlertController(title: "", message: message, preferredStyle: .alert)
+        let cancel = UIAlertAction(title: "Cancel", style: .cancel)
+        alertController.addAction(cancel)
+        /* 呼叫present()才會跳出Alert Controller */
+        viewController.present(alertController, animated: true, completion:nil)
     }
 }
