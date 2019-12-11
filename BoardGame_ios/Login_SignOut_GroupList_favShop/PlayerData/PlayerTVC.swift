@@ -14,7 +14,7 @@ class PlayerTVC: UITableViewController {
     @IBOutlet weak var tvPerson: UITextView!
     
     let url_server = URL(string: common_url + "FavServlet")
-    var playerData: PlayerData?
+    static var playerData: PlayerData?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,6 +22,7 @@ class PlayerTVC: UITableViewController {
         showImage()
     }
     
+    //取得個人資訊
     func showPlayerData() {
         var requestParam = [String: String]()
         requestParam["action"] = "getPersonalData"
@@ -32,7 +33,8 @@ class PlayerTVC: UITableViewController {
                     // 將輸入資料列印出來除錯用
                     print("playerInput: \(String(data: data!, encoding: .utf8)!)")
                     if let result = try? JSONDecoder().decode(PlayerData.self, from: data!){
-                        self.playerData = result
+                        PlayerTVC.self.playerData = result
+                        
                         DispatchQueue.main.async {
                             self.textLabel()
                             self.tableView.reloadData()
@@ -45,11 +47,13 @@ class PlayerTVC: UITableViewController {
         }
     }
     
+    //取得個人頭貼
     func showImage(){
         var requestParam = [String: Any]()
         requestParam["action"] = "getPlayerImage"
         requestParam["player_id"] = "chengchi1223"
-        requestParam["playerImageSize"] = ivPlayer.frame.width
+        //設定個人頭貼尺寸為螢幕的一半大小
+        requestParam["playerImageSize"] = view.frame.width/2
         var image: UIImage?
         executeTask(url_server!, requestParam) { (data, response, error) in
             if error == nil {
@@ -73,16 +77,18 @@ class PlayerTVC: UITableViewController {
         return 9
     }
     
+    //將servlet傳回的值放入lable顯示
     func textLabel(){
-        lbPlayer_nkname.text = playerData?.player_nkname
-        lbPlayer_bday.text = playerData?.player_bday
-        lbPlayer_area.text = playerData?.player_area
-        lbPlayer_star.text = playerData?.player_star
-        lbFav_bg.text = playerData?.adept_bg
-        lbAdept_bg.text = playerData?.adept_bg
-        tvPerson.text = playerData?.player_intro
+        lbPlayer_nkname.text = PlayerTVC.playerData?.player_nkname
+        lbPlayer_bday.text = PlayerTVC.playerData?.player_bday
+        lbPlayer_area.text = PlayerTVC.playerData?.player_area
+        lbPlayer_star.text = PlayerTVC.playerData?.player_star
+        lbFav_bg.text = PlayerTVC.playerData?.adept_bg
+        lbAdept_bg.text = PlayerTVC.playerData?.adept_bg
+        tvPerson.text = PlayerTVC.playerData?.player_intro
         
-        let gender_int = playerData?.player_gender
+        //判斷為男性還是女性
+        let gender_int = PlayerTVC.playerData?.player_gender
         var gender: String
         if gender_int == 0 {
             gender = "男性"
