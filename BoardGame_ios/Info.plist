@@ -21,6 +21,7 @@
 	<key>LSApplicationQueriesSchemes</key>
 	<array>
 		<string>line</string>
+		<string>line://</string>
 	</array>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
