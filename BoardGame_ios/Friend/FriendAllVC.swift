@@ -11,8 +11,11 @@ import UIKit
 class FriendAllVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     var friendList: Array<[String:Any]> = []
-
+    @IBOutlet weak var ivNewFriend: UIImageView!
+    
     @IBOutlet weak var tableViewAll: UITableView!
+    @IBOutlet weak var labelNewFriend: UILabel!
+    @IBOutlet weak var labelMoodNewFriend: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -73,7 +76,20 @@ class FriendAllVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
                          //分別印出所有欄位
                         self.friendList = json["result"] as! Array<[String:Any]>
                         print(self.friendList)
+                        
+                        let newFriend = self.friendList.last
+                        
                         DispatchQueue.main.async {
+                            self.labelNewFriend.text = newFriend?["player2Name"] as? String
+                            self.labelMoodNewFriend.text = newFriend?["player2Mood"] as? String
+                            
+                            if let base64String = newFriend?["player2Pic"] {
+                                if let decodedData = NSData(base64Encoded: base64String as! String, options: []) {
+                                    let decodedimage = UIImage(data: decodedData as Data)
+                                    self.ivNewFriend.image = decodedimage
+                                }
+                            }
+                            
                             self.tableViewAll.reloadData()
                         }
 //                         print(json["player2Id"] ?? "Empty player2Id")

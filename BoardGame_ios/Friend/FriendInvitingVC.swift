@@ -147,24 +147,25 @@ class FriendInvitingVC: UIViewController, UITableViewDelegate, UITableViewDataSo
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! FriendInvitingCell
+         
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! FriendInvitingCell
                
-               cell.delegate = self
-               
-               cell.btnDelete.tag = indexPath.row
+        cell.delegate = self
 
-               let friend = invitingFriendList[indexPath.row]
-               
-               cell.labelName.text = friend["player2Name"] as? String
-               
-               if let base64String = friend["player2Pic"] {
-                   if let decodedData = NSData(base64Encoded: base64String as! String, options: []) {
-                       let decodedimage = UIImage(data: decodedData as Data)
-                       cell.ivFriendInviting.image = decodedimage
-                   }
-               }
-                       
-               return cell
+        cell.btnDelete.tag = indexPath.row
+
+        let friend = invitingFriendList[indexPath.row]
+
+        cell.labelName.text = friend["player2Name"] as? String
+       
+        if let base64String = friend["player2Pic"] {
+           if let decodedData = NSData(base64Encoded: base64String as! String, options: []) {
+               let decodedimage = UIImage(data: decodedData as Data)
+               cell.ivFriendInviting.image = decodedimage
+           }
+        }
+            
+        return cell
     }
 
     /*
