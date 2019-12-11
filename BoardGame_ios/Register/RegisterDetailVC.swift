@@ -130,17 +130,16 @@ class RegisterDetailVC: UIViewController {
         let next = storyboard?.instantiateViewController(withIdentifier: "loginvc") as! LoginVC
         next.modalPresentationStyle = .fullScreen
         present(next, animated: true)
-        // self.navigationItem.setHidesBackButton(true, animated: true)
     }
     
     func datePicker(){
         // date picker setup
         let datePickerView:UIDatePicker = UIDatePicker()
-
+        
         // choose the mode you want
         // other options are: DateAndTime, Time, CountDownTimer
         datePickerView.datePickerMode = UIDatePicker.Mode.date
-
+        datePickerView.locale = Locale.init(identifier: "zh_TW")
         // choose your locale or leave the default (system)
         // datePickerView.locale = NSLocale.init(localeIdentifier: "it_IT")
 
@@ -148,7 +147,7 @@ class RegisterDetailVC: UIViewController {
         tfBirthday.inputView = datePickerView
 
         // datepicker toolbar setup
-        let toolBar = UIToolbar()
+        let toolBar = UIToolbar(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 35))
         toolBar.barStyle = UIBarStyle.default
         toolBar.isTranslucent = true
         let space = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.flexibleSpace, target: nil, action: nil)
