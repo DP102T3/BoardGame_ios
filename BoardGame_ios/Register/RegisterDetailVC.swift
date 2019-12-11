@@ -40,26 +40,28 @@ class RegisterDetailVC: UIViewController {
     }
     
     @IBAction func onSendClick(_ sender: Any) {
+        
         if (tfName.text == "") {
             
             tfName.layer.borderColor = UIColor.red.cgColor
             tfName.layer.borderWidth = 1
             tfName.layer.cornerRadius = 6
-                    }
+        }
+        
         if (tfNkName.text == "") {
-            
             tfNkName.layer.borderColor = UIColor.red.cgColor
             tfNkName.layer.borderWidth = 1
             tfNkName.layer.cornerRadius = 6
-                    }
+        }
+        
         if (tfBirthday.text == "") {
-            
             tfBirthday.layer.borderColor = UIColor.red.cgColor
             tfBirthday.layer.borderWidth = 1
             tfBirthday.layer.cornerRadius = 6
         }
         
         if (tfName.text == "" || tfNkName.text == "" || tfBirthday.text == "") {
+            
             return
         }
         
@@ -95,7 +97,7 @@ class RegisterDetailVC: UIViewController {
                     // 把request利用session.dataTask傳給目標server
                     let dataTask = session.dataTask(with: request) { data,response,error in
                         // 如果沒有response則show error
-                       guard let httpResponse = response as? HTTPURLResponse
+                        guard (response as? HTTPURLResponse) != nil
                        else {
                           print("error: not a valid http response")
                           return
@@ -105,15 +107,30 @@ class RegisterDetailVC: UIViewController {
                 
         //      若成功送出資料執行以下程式碼
                     let controller = UIAlertController(title: "註冊結果", message: "註冊成功！", preferredStyle: .alert)
+                    
                     let okAction = UIAlertAction(title: "確定", style: .default, handler: nil)
-                    controller.addAction(okAction)
+                    
+                    let okDemoAction = UIAlertAction(title: "確定", style: .default) { (action) in
+                        DispatchQueue.main.async {
+                            self.backToLogin()
+                        }
+                    }
+                    controller.addAction(okDemoAction)
                     self.present(controller, animated: true, completion: nil)
-                
                 }
+        
                 controller.addAction(okAction)
                 let cancelAction = UIAlertAction(title: "取消", style: .cancel, handler: nil)
                 controller.addAction(cancelAction)
                 present(controller, animated: true, completion: nil)
+    }
+    
+    func backToLogin() {
+        print("ddd")
+        let next = storyboard?.instantiateViewController(withIdentifier: "loginvc") as! LoginVC
+        next.modalPresentationStyle = .fullScreen
+        present(next, animated: true)
+        // self.navigationItem.setHidesBackButton(true, animated: true)
     }
     
     func datePicker(){
