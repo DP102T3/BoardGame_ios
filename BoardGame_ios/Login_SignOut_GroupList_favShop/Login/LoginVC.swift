@@ -68,7 +68,8 @@ class LoginVC: UIViewController {
             tfPassword.text = ""
             lbResult.text = ""
             //TODO 連結到正確畫面
-            let resultvc = storyboard?.instantiateViewController(withIdentifier: "resultVC")
+            let resultvc = storyboard?.instantiateViewController(withIdentifier: "PersonalDataSB")
+            resultvc?.modalPresentationStyle = .fullScreen
             present(resultvc! , animated: true) 
         }else{
             lbResult.text = "帳號密碼錯誤"

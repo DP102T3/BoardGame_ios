@@ -11,9 +11,11 @@ class FavShopTVC_: UITableViewController, FavShopVCCellDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableViewAddRefreshControl()
-        showAllFavShops()
-        print("ShopViewDidLoad")
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+           showAllFavShops()
+      }
     
     /** tableView加上下拉更新功能 */
     func tableViewAddRefreshControl() {
@@ -24,7 +26,6 @@ class FavShopTVC_: UITableViewController, FavShopVCCellDelegate {
     }
     
     @objc func showAllFavShops() {
-        print("showAllFavShops()")
         var requestParam = [String: String]()
         requestParam["action"] = "getAll"
         requestParam["player_id"] = "chengchi1223"
@@ -56,12 +57,10 @@ class FavShopTVC_: UITableViewController, FavShopVCCellDelegate {
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        print("ShopCount:\(favShopData.count)")
         return favShopData.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        print("ShopCellForRowAt")
         let cellId = "favShop"
         // tableViewCell預設的imageView點擊後會改變尺寸，所以建立UITableViewCell子類別SpotCell
         let favShopCell = tableView.dequeueReusableCell(withIdentifier: cellId,for: indexPath) as! FavShopCell
@@ -80,7 +79,6 @@ class FavShopTVC_: UITableViewController, FavShopVCCellDelegate {
             if error == nil {
                 print(requestParam)
                 if data != nil {
-                    print("ShopImageInput: \(data!)")
                     image = UIImage(data: data!)
                 }
                 if image == nil {
