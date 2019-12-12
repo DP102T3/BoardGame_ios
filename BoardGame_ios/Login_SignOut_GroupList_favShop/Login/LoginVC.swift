@@ -1,11 +1,3 @@
-//
-//  LoginVC.swift
-//  BoardGame_ios
-//
-//  Created by 黃國展 on 2019/11/27.
-//  Copyright © 2019 黃國展. All rights reserved.
-//
-
 import UIKit
 
 class LoginVC: UIViewController {
@@ -14,11 +6,33 @@ class LoginVC: UIViewController {
     @IBOutlet weak var lbResult: UILabel!
     
     var result: String?
-    
+    var userName: String?
+    var player_id: String?
     let url_server = URL(string: "http://127.0.0.1:8080/BoardGame_Web/LoginServlet")
     
+//    override func loadView() {
+//        player_id = loadUserDefaults("player_id")
+//        if player_id != nil {
+//            if let controllers = self.navigationController?.viewControllers {
+//                for vc in controllers {
+//                    if vc is FavShopVC_ {
+//                        self.navigationController?.popToViewController(vc, animated: false)
+//                    }
+//                }
+//            }
+//        }else{
+//            if let controllers = self.navigationController?.viewControllers {
+//                for vc in controllers {
+//                    if vc is LoginVC {
+//                        self.navigationController?.popToViewController(vc, animated: false)
+//                    }
+//                }
+//            }
+//        }
+//    }
+    
     @IBAction func clickLogin(_ sender: UIButton) {
-        let userName = tfUserName.text == nil ? "" : tfUserName.text?.trimmingCharacters(in: .whitespacesAndNewlines)
+        userName = tfUserName.text == nil ? "" : tfUserName.text?.trimmingCharacters(in: .whitespacesAndNewlines)
         let password = tfPassword.text == nil ? "" : tfPassword.text?.trimmingCharacters(in: .whitespacesAndNewlines)
         if userName!.isEmpty || password!.isEmpty {
             lbResult?.text = "請輸入帳號密碼"
@@ -61,19 +75,20 @@ class LoginVC: UIViewController {
         task.resume()
     }
     
-    
     func next(_ result: String){
         if result == "correct"{
             tfUserName.text = ""
             tfPassword.text = ""
             lbResult.text = ""
+            saveUserDefaults("player_id",userName!)
             //TODO 連結到正確畫面
-            let resultvc = storyboard?.instantiateViewController(withIdentifier: "PersonalDataSB")
+            let resultvc = storyboard?.instantiateViewController(withIdentifier: "tabSB")
             resultvc?.modalPresentationStyle = .fullScreen
-            present(resultvc! , animated: true) 
+            present(resultvc! , animated: false)
         }else{
             lbResult.text = "帳號密碼錯誤"
         }
     }
+    
 }
 

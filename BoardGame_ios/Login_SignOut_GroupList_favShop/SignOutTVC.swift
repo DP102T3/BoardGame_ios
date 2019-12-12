@@ -9,6 +9,10 @@
 import UIKit
 
 class SignOutTVC: UITableViewController {
+    override func viewWillDisappear(_ animated: Bool){
+        let defaults = UserDefaults.standard
+        defaults.removeObject(forKey: "player_id")
+    }
 }
 
 

@@ -108,7 +108,7 @@ class RegisterDetailVC: UIViewController {
         //      若成功送出資料執行以下程式碼
                     let controller = UIAlertController(title: "註冊結果", message: "註冊成功！", preferredStyle: .alert)
                     
-                    let okAction = UIAlertAction(title: "確定", style: .default, handler: nil)
+                    _ = UIAlertAction(title: "確定", style: .default, handler: nil)
                     
                     let okDemoAction = UIAlertAction(title: "確定", style: .default) { (action) in
                         DispatchQueue.main.async {
