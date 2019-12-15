@@ -85,15 +85,18 @@ class ScanQRViewController: UIViewController, AVCaptureMetadataOutputObjectsDele
             captureMetadataOutput.setMetadataObjectsDelegate(self, queue: DispatchQueue.main)
             captureMetadataOutput.metadataObjectTypes = [AVMetadataObject.ObjectType.qr]
             
-            // 初始化影片預覽層，並將其作為子層加入 viewPreview 視圖的圖層中
-            videoPreviewLayer = AVCaptureVideoPreviewLayer(session: captureSession!)
-            videoPreviewLayer?.videoGravity = AVLayerVideoGravity.resizeAspectFill
-            videoPreviewLayer?.frame = view.layer.bounds
-            view.layer.addSublayer(videoPreviewLayer!)
+            DispatchQueue.main.async {
+                // 初始化影片預覽層，並將其作為子層加入 viewPreview 視圖的圖層中
+                self.videoPreviewLayer = AVCaptureVideoPreviewLayer(session: self.captureSession!)
+                self.videoPreviewLayer?.videoGravity = AVLayerVideoGravity.resizeAspectFill
+                self.videoPreviewLayer?.frame = self.view.layer.bounds
+                self.view.layer.addSublayer(self.videoPreviewLayer!)
+                           
+                // 開始影片的擷取
+                self.captureSession!.startRunning()
+            }
             
-            // 開始影片的擷取
-            captureSession!.startRunning()
-            
+              
 
         } catch {
             // 假如有錯誤產生、單純輸出其狀況不再繼續執行
@@ -137,10 +140,13 @@ class ScanQRViewController: UIViewController, AVCaptureMetadataOutputObjectsDele
     func parseFriendProfile(_ jsonString: String) {
         if let json = (try? JSONSerialization.jsonObject(with: jsonString.data(using: .utf8)!, options: [])) as? [String: Any] {
             print(json)
-            print(json["nkName"] ?? "empty name")
-            print(json["id"] ?? "empty id")
+            print(json["frNkName"] ?? "empty name")
+            print(json["frID"] ?? "empty id")
             
-            friend = json
+            friend = [
+                "id": json["frID"] ?? "",
+                "nkName": json["frNkName"] ?? ""
+            ]
             
             closeQRCodeScanner()
             

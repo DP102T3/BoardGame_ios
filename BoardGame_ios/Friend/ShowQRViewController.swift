@@ -25,11 +25,11 @@ class ShowQRViewController: UIViewController {
 
         var qrcodeImage: CIImage!
        
-        // TODO: - 需拿到登入時存入的使用者資料
         let myProfile = [
-            "id": "myself",
-            "nkName": "我自己"
+            "frID": loadUserDefaults("player_id"),
+            "frNkName": "我自己" //TODO 寫死
         ]
+        print(loadUserDefaults("player_id"))
         
         let jsonMyProfile = try? JSONSerialization.data(withJSONObject: myProfile)
 

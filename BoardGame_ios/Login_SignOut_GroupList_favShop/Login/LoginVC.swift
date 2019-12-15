@@ -80,12 +80,12 @@ class LoginVC: UIViewController {
             tfUserName.text = ""
             tfPassword.text = ""
             lbResult.text = ""
-            saveUserDefaults("player_id",userName!)
+            saveUserDefaults("player_id", userName!)
             //TODO 連結到正確畫面
             let resultvc = storyboard?.instantiateViewController(withIdentifier: "tabSB")
             resultvc?.modalPresentationStyle = .fullScreen
             present(resultvc! , animated: false)
-        }else{
+        } else {
             lbResult.text = "帳號密碼錯誤"
         }
     }
