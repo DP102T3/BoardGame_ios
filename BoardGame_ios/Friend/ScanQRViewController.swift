@@ -16,7 +16,8 @@ class ScanQRViewController: UIViewController, AVCaptureMetadataOutputObjectsDele
     var captureSession:AVCaptureSession?
     var videoPreviewLayer:AVCaptureVideoPreviewLayer?
     var qrCodeFrameView:UIView?
-    
+    let user = loadUserDefaults("player_id")
+
     var friend: [String: Any]?
     
     override func viewDidLoad() {
@@ -164,14 +165,14 @@ class ScanQRViewController: UIViewController, AVCaptureMetadataOutputObjectsDele
         let configuration = URLSessionConfiguration.default
         let session = URLSession(configuration: configuration)
                     
-        let url = URL(string: "http://localhost:8080/Advertisement_Server/CreateFriend")
+        let url = URL(string: "http://127.0.0.1:8080/Advertisement_Server/CreateFriend")
         var request : URLRequest = URLRequest(url: url!)
 
         // 利用POST方法傳給server
         request.httpMethod = "POST"
 
         let json: [String: Any] = [
-            "player1Id": "myself",
+            "player1Id": "\(user)",
             "player2Id": friend["id"] as! String,
             "inviteStatus": 1,
             "pointCount": 0

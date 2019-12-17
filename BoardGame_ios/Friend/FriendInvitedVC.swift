@@ -12,6 +12,8 @@ class FriendInvitedVC: UIViewController, UITableViewDataSource, UITableViewDeleg
 
     var invitedFriendList: Array<[String:Any]> = []
     @IBOutlet weak var tableViewInvited: UITableView!
+  
+    let user = loadUserDefaults("player_id")
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,14 +32,14 @@ class FriendInvitedVC: UIViewController, UITableViewDataSource, UITableViewDeleg
         let configuration = URLSessionConfiguration.default
         let session = URLSession(configuration: configuration)
                     
-        let url = URL(string: "http://localhost:8080/Advertisement_Server/GetInvitedFriend")
+        let url = URL(string: "http://127.0.0.1:8080/Advertisement_Server/GetInvitedFriend")
         var request : URLRequest = URLRequest(url: url!)
 
         // 利用POST方法傳給server
         request.httpMethod = "POST"
 
         let json: [String: Any] = [
-            "player2Id": "myself"
+            "player2Id": "\(user)"
         ]
                     
         let jsonData = try? JSONSerialization.data(withJSONObject: json)
@@ -133,7 +135,7 @@ class FriendInvitedVC: UIViewController, UITableViewDataSource, UITableViewDeleg
         let configuration = URLSessionConfiguration.default
         let session = URLSession(configuration: configuration)
                     
-        let url = URL(string: "http://localhost:8080/Advertisement_Server/CreateFriend")
+        let url = URL(string: "http://127.0.0.1:8080/Advertisement_Server/CreateFriend")
         var request : URLRequest = URLRequest(url: url!)
 
         // 利用POST方法傳給server
@@ -141,7 +143,7 @@ class FriendInvitedVC: UIViewController, UITableViewDataSource, UITableViewDeleg
 
         let json: [String: Any] = [
             "player1Id": friend["player1Id"] as! String,
-            "player2Id": "myself",
+            "player2Id": "\(user)",
             "inviteStatus": 2,
             "pointCount": 0
         ]
@@ -182,7 +184,7 @@ class FriendInvitedVC: UIViewController, UITableViewDataSource, UITableViewDeleg
         let configuration = URLSessionConfiguration.default
         let session = URLSession(configuration: configuration)
                     
-        let url = URL(string: "http://localhost:8080/Advertisement_Server/DeleteFriend")
+        let url = URL(string: "http://127.0.0.1:8080/Advertisement_Server/DeleteFriend")
         var request : URLRequest = URLRequest(url: url!)
 
         // 利用POST方法傳給server
@@ -190,7 +192,7 @@ class FriendInvitedVC: UIViewController, UITableViewDataSource, UITableViewDeleg
 
         let json: [String: Any] = [
             "player1Id": friend["player1Id"] as! String,
-            "player2Id": "myself"
+            "player2Id": "\(user)"
         ]
                     
         let jsonData = try? JSONSerialization.data(withJSONObject: json)

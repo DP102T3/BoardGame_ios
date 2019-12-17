@@ -13,6 +13,7 @@ class FriendInvitingVC: UIViewController, UITableViewDelegate, UITableViewDataSo
     @IBOutlet weak var tableViewInviting: UITableView!
     
     var invitingFriendList: Array<[String:Any]> = []
+    let user = loadUserDefaults("player_id")
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,14 +31,14 @@ class FriendInvitingVC: UIViewController, UITableViewDelegate, UITableViewDataSo
         let configuration = URLSessionConfiguration.default
         let session = URLSession(configuration: configuration)
                     
-        let url = URL(string: "http://localhost:8080/Advertisement_Server/GetFriendList")
+        let url = URL(string: "http://127.0.0.1:8080/Advertisement_Server/GetFriendList")
         var request : URLRequest = URLRequest(url: url!)
 
         // 利用POST方法傳給server
         request.httpMethod = "POST"
 
         let json: [String: Any] = [
-            "player1Id": "myself"
+            "player1Id": "\(user)"
         ]
                     
         let jsonData = try? JSONSerialization.data(withJSONObject: json)
@@ -102,14 +103,14 @@ class FriendInvitingVC: UIViewController, UITableViewDelegate, UITableViewDataSo
         let configuration = URLSessionConfiguration.default
         let session = URLSession(configuration: configuration)
                     
-        let url = URL(string: "http://localhost:8080/Advertisement_Server/DeleteFriend")
+        let url = URL(string: "http://127.0.0.1:8080/Advertisement_Server/DeleteFriend")
         var request : URLRequest = URLRequest(url: url!)
 
         // 利用POST方法傳給server
         request.httpMethod = "POST"
 
         let json: [String: Any] = [
-            "player1Id": "myself",
+            "player1Id": "\(user)",
             "player2Id": friend["player2Id"] as! String
         ]
                     
