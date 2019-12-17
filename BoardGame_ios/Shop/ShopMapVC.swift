@@ -18,7 +18,9 @@ class ShopMapVC: UIViewController, MKMapViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        geocoder()
+        setupMap()
         // Do any additional setup after loading the view.
     }
     
@@ -69,7 +71,7 @@ class ShopMapVC: UIViewController, MKMapViewDelegate {
     
     func geocoder(){
         let geocoder = CLGeocoder()
-        geocoder.geocodeAddressString(shop.shopAddress) { (placemarks, error) in
+        geocoder.geocodeAddressString(shop.shopAddress ?? "") { (placemarks, error) in
             if placemarks != nil && placemarks!.count > 0 {
                 if let placemark = placemarks!.first {
                     let location = placemark.location!

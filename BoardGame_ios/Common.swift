@@ -6,6 +6,7 @@ import UIKit
 // 模擬器
 let common_url = "http://127.0.0.1:8080/BoardGame_Web/"
 let common_url_forChat = "http://127.0.0.1:8080/DevBG/"
+let urlForFriendAndShop = "http://127.0.0.1:8080/Advertisement_Server/"
 
 func executeTask(_ url_server: URL, _ requestParam: [String: Any], completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void) {
     // requestParam值為Any就必須使用JSONSerialization.data()，而非JSONEncoder.encode()
