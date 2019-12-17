@@ -20,8 +20,8 @@
 		D005382423A6970F00E9034F /* ShopMapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D005382323A6970F00E9034F /* ShopMapVC.swift */; };
 		D005382623A6980700E9034F /* ShopListTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D005382523A6980700E9034F /* ShopListTableVC.swift */; };
 		D051B1C423A6A7000084DF08 /* ShopCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D051B1C323A6A7000084DF08 /* ShopCell.swift */; };
-		D051B1C623A6A9F40084DF08 /* Shop.swift in Sources */ = {isa = PBXBuildFile; fileRef = D051B1C523A6A9F40084DF08 /* Shop.swift */; };
 		D051B1C823A6B1220084DF08 /* ShopDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D051B1C723A6B1220084DF08 /* ShopDetailViewController.swift */; };
+		D0604B7E23A897FE00D1E0E6 /* Shop.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0604B7D23A897FE00D1E0E6 /* Shop.swift */; };
 		D088EADF239FE18A006F650F /* RegisterHomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D088EAD4239FE18A006F650F /* RegisterHomeVC.swift */; };
 		D088EAE0239FE18A006F650F /* RegisterDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D088EAD5239FE18A006F650F /* RegisterDetailVC.swift */; };
 		D088EAEF23A098E1006F650F /* FriendInvitedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D088EAE223A098E1006F650F /* FriendInvitedCell.swift */; };
@@ -78,8 +78,8 @@
 		D005382323A6970F00E9034F /* ShopMapVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopMapVC.swift; sourceTree = "<group>"; };
 		D005382523A6980700E9034F /* ShopListTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopListTableVC.swift; sourceTree = "<group>"; };
 		D051B1C323A6A7000084DF08 /* ShopCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopCell.swift; sourceTree = "<group>"; };
-		D051B1C523A6A9F40084DF08 /* Shop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shop.swift; sourceTree = "<group>"; };
 		D051B1C723A6B1220084DF08 /* ShopDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopDetailViewController.swift; sourceTree = "<group>"; };
+		D0604B7D23A897FE00D1E0E6 /* Shop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Shop.swift; sourceTree = "<group>"; };
 		D088EAD4239FE18A006F650F /* RegisterHomeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterHomeVC.swift; sourceTree = "<group>"; };
 		D088EAD5239FE18A006F650F /* RegisterDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterDetailVC.swift; sourceTree = "<group>"; };
 		D088EAE223A098E1006F650F /* FriendInvitedCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendInvitedCell.swift; sourceTree = "<group>"; };
@@ -174,9 +174,9 @@
 			children = (
 				D005382123A68C6100E9034F /* Shop.storyboard */,
 				D005382323A6970F00E9034F /* ShopMapVC.swift */,
+				D0604B7D23A897FE00D1E0E6 /* Shop.swift */,
 				D005382523A6980700E9034F /* ShopListTableVC.swift */,
 				D051B1C323A6A7000084DF08 /* ShopCell.swift */,
-				D051B1C523A6A9F40084DF08 /* Shop.swift */,
 				D051B1C723A6B1220084DF08 /* ShopDetailViewController.swift */,
 			);
 			path = Shop;
@@ -394,6 +394,7 @@
 				E30DFA102398DE480081BC48 /* FavShopTVC_.swift in Sources */,
 				C492EE8023964C53000AB2D9 /* ChatTableViewCell.swift in Sources */,
 				D088EAEF23A098E1006F650F /* FriendInvitedCell.swift in Sources */,
+				D0604B7E23A897FE00D1E0E6 /* Shop.swift in Sources */,
 				D088EAF523A098E1006F650F /* FriendHomeVC.swift in Sources */,
 				E39ACBBE238FE8A3000973E3 /* FavShopCell.swift in Sources */,
 				E39ACBE823920A01000973E3 /* MapVC.swift in Sources */,
@@ -426,7 +427,6 @@
 				D005382623A6980700E9034F /* ShopListTableVC.swift in Sources */,
 				D088EAF023A098E1006F650F /* FriendInvitedDelegate.swift in Sources */,
 				D088EAF723A098E1006F650F /* ScanQRCodeDelegate.swift in Sources */,
-				D051B1C623A6A9F40084DF08 /* Shop.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
