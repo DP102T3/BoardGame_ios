@@ -3,17 +3,14 @@ import UIKit
 class FavShopTVC_: UITableViewController, FavShopVCCellDelegate {
     
     @IBOutlet var favTableView: UITableView!
-    var shop = ShopData.init(0, "", "", 0, 0)
+    var shop = ShopData.init(0, "", "", 0.0)
     var indexPath: IndexPath?
     var favShopData = [ShopData]()
     let url_server = URL(string: common_url + "FavServlet")
-    var player_id: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         tableViewAddRefreshControl()
-        player_id = loadUserDefaults("player_id")
-        print("FavShopTVC_\(String(describing: player_id))")
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -59,13 +56,11 @@ class FavShopTVC_: UITableViewController, FavShopVCCellDelegate {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        print("favShopData.count:\(favShopData.count)")
         // #warning Incomplete implementation, return the number of rows
         return favShopData.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        print("FavShopCellForRowAt")
         let cellId = "favShop"
         // tableViewCell預設的imageView點擊後會改變尺寸，所以建立UITableViewCell子類別SpotCell
         let favShopCell = tableView.dequeueReusableCell(withIdentifier: cellId,for: indexPath) as! FavShopCell
@@ -97,7 +92,7 @@ class FavShopTVC_: UITableViewController, FavShopVCCellDelegate {
         
         favShopCell.lbShopName.text = shop.shopName
         favShopCell.lbAddress.text = shop.address
-        favShopCell.lbRate.text = String("評分：\(shop.rate_total/shop.rate_count)")
+        favShopCell.lbRate.text = String(shop.rate)
         return favShopCell
     }
     

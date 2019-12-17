@@ -9,28 +9,30 @@
 import UIKit
 
 class FavShopVC_: UIViewController {
+    @IBOutlet weak var personalCV: UIView!
+    @IBOutlet weak var groupCV: UIView!
+    @IBOutlet weak var favShopCV: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        self.children[0].view.isHidden = false
-        self.children[1].view.isHidden = true
-        self.children[2].view.isHidden = true
+        personalCV.isHidden = false
+        groupCV.isHidden = true
+        favShopCV.isHidden = true
     }
-
+    
     @IBAction func SegmentedAction(_ sender: UISegmentedControl) {
         if sender.selectedSegmentIndex == 0 {
-            self.children[0].view.isHidden = false
-            self.children[1].view.isHidden = true
-            self.children[2].view.isHidden = true
-        } else if sender.selectedSegmentIndex == 1 {
-            self.children[0].view.isHidden = true
-            self.children[1].view.isHidden = false
-            self.children[2].view.isHidden = true
-        } else {
-            self.children[0].view.isHidden = true
-            self.children[1].view.isHidden = true
-            self.children[2].view.isHidden = false
+            personalCV.isHidden = false
+            groupCV.isHidden = true
+            favShopCV.isHidden = true
+        }else if sender.selectedSegmentIndex == 1 {
+            personalCV.isHidden = true
+            groupCV.isHidden = false
+            favShopCV.isHidden = true
+        }else {
+            personalCV.isHidden = true
+            groupCV.isHidden = true
+            favShopCV.isHidden = false
         }
     }
 }
