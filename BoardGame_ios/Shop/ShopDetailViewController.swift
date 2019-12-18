@@ -22,20 +22,21 @@ class ShopDetailViewController: UIViewController {
     @IBOutlet weak var labelIntro: UILabel!
     
     var shop: Shop!
-    let url_server = URL(string: common_url + "SignupServlet")
+    let url_server = URL(string: urlForFriendAndShop + "GetShops")
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.navigationController?.title = shop.shopName
+        self.title = shop.shopName
         
         self.labelId.text = String(shop.shopId)
         self.labelAdress.text = shop.shopAddress
         self.labelTel.text = String(shop.shopTel)
         self.labelIntro.text = shop.shopIntro
         self.labelCharge.text = shop.shopCharge
-        self.labelRate.text = String(shop.rateTotal / Double(shop.rateCount))
-        
+        let score = shop.rateTotal / Double(shop.rateCount)
+        self.labelRate.text = String(format: "%.1f", score)
+    
         var requestParam = [String: Any]()
         requestParam["action"] = "getShopImage"
         requestParam["shopId"] = shop.shopId
@@ -45,8 +46,14 @@ class ShopDetailViewController: UIViewController {
             var image: UIImage?
             if error == nil {
                 print(requestParam)
-                if data != nil {
-                    image = UIImage(data: data!)
+                if let data = data {
+                    if let base64String = String(data: data, encoding: .utf8) {
+                        print(base64String)
+                        if let decodedData = NSData(base64Encoded: base64String, options: []){
+                            let decodedimage = UIImage(data: decodedData as Data)
+                            image = decodedimage
+                        }
+                    }
                 }
                 if image == nil {
                     image = UIImage(named: "noImage.jpg")
@@ -59,6 +66,11 @@ class ShopDetailViewController: UIViewController {
         
         
         // Do any additional setup after loading the view.
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let shopMapVC = segue.destination as! ShopMapVC
+        shopMapVC.shop = shop
     }
 
     @IBAction func onBtnPhoneClick(_ sender: Any) {

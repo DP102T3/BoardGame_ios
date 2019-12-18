@@ -16,26 +16,27 @@
 		C492EE8023964C53000AB2D9 /* ChatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C492EE7D23964C53000AB2D9 /* ChatTableViewCell.swift */; };
 		C492EE8123964C53000AB2D9 /* ChatVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C492EE7B23964C53000AB2D9 /* ChatVC.swift */; };
 		C492EE8223964C53000AB2D9 /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = C492EE7E23964C53000AB2D9 /* Group.swift */; };
-		D005382223A68C6100E9034F /* Shop.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D005382123A68C6100E9034F /* Shop.storyboard */; };
-		D005382423A6970F00E9034F /* ShopMapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D005382323A6970F00E9034F /* ShopMapVC.swift */; };
-		D005382623A6980700E9034F /* ShopListTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D005382523A6980700E9034F /* ShopListTableVC.swift */; };
-		D051B1C423A6A7000084DF08 /* ShopCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D051B1C323A6A7000084DF08 /* ShopCell.swift */; };
-		D0604B7E23A897FE00D1E0E6 /* Shop.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0604B7D23A897FE00D1E0E6 /* Shop.swift */; };
 		D088EADF239FE18A006F650F /* RegisterHomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D088EAD4239FE18A006F650F /* RegisterHomeVC.swift */; };
 		D088EAE0239FE18A006F650F /* RegisterDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D088EAD5239FE18A006F650F /* RegisterDetailVC.swift */; };
-		D088EAEF23A098E1006F650F /* FriendInvitedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D088EAE223A098E1006F650F /* FriendInvitedCell.swift */; };
-		D088EAF023A098E1006F650F /* FriendInvitedDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D088EAE323A098E1006F650F /* FriendInvitedDelegate.swift */; };
-		D088EAF123A098E1006F650F /* FriendAllVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D088EAE423A098E1006F650F /* FriendAllVC.swift */; };
-		D088EAF223A098E1006F650F /* Friend.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D088EAE523A098E1006F650F /* Friend.storyboard */; };
-		D088EAF323A098E1006F650F /* ShowQRViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D088EAE623A098E1006F650F /* ShowQRViewController.swift */; };
-		D088EAF423A098E1006F650F /* FriendInvitedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D088EAE723A098E1006F650F /* FriendInvitedVC.swift */; };
-		D088EAF523A098E1006F650F /* FriendHomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D088EAE823A098E1006F650F /* FriendHomeVC.swift */; };
-		D088EAF623A098E1006F650F /* ScanQRViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D088EAE923A098E1006F650F /* ScanQRViewController.swift */; };
-		D088EAF723A098E1006F650F /* ScanQRCodeDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D088EAEA23A098E1006F650F /* ScanQRCodeDelegate.swift */; };
-		D088EAF823A098E1006F650F /* FriendInvitingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D088EAEB23A098E1006F650F /* FriendInvitingCell.swift */; };
-		D088EAF923A098E1006F650F /* ScanQRCodeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D088EAEC23A098E1006F650F /* ScanQRCodeCell.swift */; };
-		D088EAFA23A098E1006F650F /* FriendInvitingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D088EAED23A098E1006F650F /* FriendInvitingVC.swift */; };
-		D088EAFB23A098E1006F650F /* FriendInvitingDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D088EAEE23A098E1006F650F /* FriendInvitingDelegate.swift */; };
+		D0C5052F23AABC8500B42FAF /* Shop.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0C5051B23AABC8500B42FAF /* Shop.storyboard */; };
+		D0C5053023AABC8500B42FAF /* ShopMapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C5051C23AABC8500B42FAF /* ShopMapVC.swift */; };
+		D0C5053123AABC8500B42FAF /* ShopCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C5051D23AABC8500B42FAF /* ShopCell.swift */; };
+		D0C5053223AABC8500B42FAF /* ShopDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C5051E23AABC8500B42FAF /* ShopDetailViewController.swift */; };
+		D0C5053323AABC8500B42FAF /* Shop.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C5051F23AABC8500B42FAF /* Shop.swift */; };
+		D0C5053423AABC8500B42FAF /* ShopListTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C5052023AABC8500B42FAF /* ShopListTableVC.swift */; };
+		D0C5053523AABC8500B42FAF /* FriendInvitedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C5052223AABC8500B42FAF /* FriendInvitedCell.swift */; };
+		D0C5053623AABC8500B42FAF /* FriendInvitedDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C5052323AABC8500B42FAF /* FriendInvitedDelegate.swift */; };
+		D0C5053723AABC8500B42FAF /* FriendAllVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C5052423AABC8500B42FAF /* FriendAllVC.swift */; };
+		D0C5053823AABC8500B42FAF /* Friend.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0C5052523AABC8500B42FAF /* Friend.storyboard */; };
+		D0C5053923AABC8500B42FAF /* ShowQRViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C5052623AABC8500B42FAF /* ShowQRViewController.swift */; };
+		D0C5053A23AABC8500B42FAF /* FriendInvitedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C5052723AABC8500B42FAF /* FriendInvitedVC.swift */; };
+		D0C5053B23AABC8500B42FAF /* FriendHomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C5052823AABC8500B42FAF /* FriendHomeVC.swift */; };
+		D0C5053C23AABC8500B42FAF /* ScanQRViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C5052923AABC8500B42FAF /* ScanQRViewController.swift */; };
+		D0C5053D23AABC8500B42FAF /* ScanQRCodeDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C5052A23AABC8500B42FAF /* ScanQRCodeDelegate.swift */; };
+		D0C5053E23AABC8500B42FAF /* FriendInvitingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C5052B23AABC8500B42FAF /* FriendInvitingCell.swift */; };
+		D0C5053F23AABC8500B42FAF /* ScanQRCodeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C5052C23AABC8500B42FAF /* ScanQRCodeCell.swift */; };
+		D0C5054023AABC8500B42FAF /* FriendInvitingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C5052D23AABC8500B42FAF /* FriendInvitingVC.swift */; };
+		D0C5054123AABC8500B42FAF /* FriendInvitingDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C5052E23AABC8500B42FAF /* FriendInvitingDelegate.swift */; };
 		E30DFA0E2398DE0F0081BC48 /* FavShopVC_.swift in Sources */ = {isa = PBXBuildFile; fileRef = E30DFA0D2398DE0F0081BC48 /* FavShopVC_.swift */; };
 		E30DFA102398DE480081BC48 /* FavShopTVC_.swift in Sources */ = {isa = PBXBuildFile; fileRef = E30DFA0F2398DE480081BC48 /* FavShopTVC_.swift */; };
 		E30DFA132398DE8B0081BC48 /* GroupCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E30DFA122398DE8B0081BC48 /* GroupCell.swift */; };
@@ -56,7 +57,6 @@
 		E39ACBC3238FF46B000973E3 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = E39ACBC2238FF46B000973E3 /* Common.swift */; };
 		E39ACBE823920A01000973E3 /* MapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E39ACBE723920A01000973E3 /* MapVC.swift */; };
 		E39ACBEA23928333000973E3 /* TPDirect.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E39ACBE923928332000973E3 /* TPDirect.framework */; };
-		E3CB1E3323A8CED300043275 /* ShopDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3CB1E3223A8CED300043275 /* ShopDetailViewController.swift */; };
 		E3CB1E3B23A8CF2000043275 /* GroupDetailTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3CB1E3523A8CF2000043275 /* GroupDetailTVC.swift */; };
 		E3CB1E3C23A8CF2000043275 /* GroupListData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3CB1E3623A8CF2000043275 /* GroupListData.swift */; };
 		E3CB1E3D23A8CF2000043275 /* GroupDetailData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3CB1E3723A8CF2000043275 /* GroupDetailData.swift */; };
@@ -79,26 +79,27 @@
 		C492EE7C23964C53000AB2D9 /* Friend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Friend.swift; sourceTree = "<group>"; };
 		C492EE7D23964C53000AB2D9 /* ChatTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatTableViewCell.swift; sourceTree = "<group>"; };
 		C492EE7E23964C53000AB2D9 /* Group.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
-		D005382123A68C6100E9034F /* Shop.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Shop.storyboard; sourceTree = "<group>"; };
-		D005382323A6970F00E9034F /* ShopMapVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopMapVC.swift; sourceTree = "<group>"; };
-		D005382523A6980700E9034F /* ShopListTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopListTableVC.swift; sourceTree = "<group>"; };
-		D051B1C323A6A7000084DF08 /* ShopCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopCell.swift; sourceTree = "<group>"; };
-		D0604B7D23A897FE00D1E0E6 /* Shop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Shop.swift; sourceTree = "<group>"; };
 		D088EAD4239FE18A006F650F /* RegisterHomeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterHomeVC.swift; sourceTree = "<group>"; };
 		D088EAD5239FE18A006F650F /* RegisterDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterDetailVC.swift; sourceTree = "<group>"; };
-		D088EAE223A098E1006F650F /* FriendInvitedCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendInvitedCell.swift; sourceTree = "<group>"; };
-		D088EAE323A098E1006F650F /* FriendInvitedDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendInvitedDelegate.swift; sourceTree = "<group>"; };
-		D088EAE423A098E1006F650F /* FriendAllVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendAllVC.swift; sourceTree = "<group>"; };
-		D088EAE523A098E1006F650F /* Friend.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Friend.storyboard; sourceTree = "<group>"; };
-		D088EAE623A098E1006F650F /* ShowQRViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowQRViewController.swift; sourceTree = "<group>"; };
-		D088EAE723A098E1006F650F /* FriendInvitedVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendInvitedVC.swift; sourceTree = "<group>"; };
-		D088EAE823A098E1006F650F /* FriendHomeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendHomeVC.swift; sourceTree = "<group>"; };
-		D088EAE923A098E1006F650F /* ScanQRViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScanQRViewController.swift; sourceTree = "<group>"; };
-		D088EAEA23A098E1006F650F /* ScanQRCodeDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScanQRCodeDelegate.swift; sourceTree = "<group>"; };
-		D088EAEB23A098E1006F650F /* FriendInvitingCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendInvitingCell.swift; sourceTree = "<group>"; };
-		D088EAEC23A098E1006F650F /* ScanQRCodeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScanQRCodeCell.swift; sourceTree = "<group>"; };
-		D088EAED23A098E1006F650F /* FriendInvitingVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendInvitingVC.swift; sourceTree = "<group>"; };
-		D088EAEE23A098E1006F650F /* FriendInvitingDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendInvitingDelegate.swift; sourceTree = "<group>"; };
+		D0C5051B23AABC8500B42FAF /* Shop.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Shop.storyboard; sourceTree = "<group>"; };
+		D0C5051C23AABC8500B42FAF /* ShopMapVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShopMapVC.swift; sourceTree = "<group>"; };
+		D0C5051D23AABC8500B42FAF /* ShopCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShopCell.swift; sourceTree = "<group>"; };
+		D0C5051E23AABC8500B42FAF /* ShopDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShopDetailViewController.swift; sourceTree = "<group>"; };
+		D0C5051F23AABC8500B42FAF /* Shop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Shop.swift; sourceTree = "<group>"; };
+		D0C5052023AABC8500B42FAF /* ShopListTableVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShopListTableVC.swift; sourceTree = "<group>"; };
+		D0C5052223AABC8500B42FAF /* FriendInvitedCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendInvitedCell.swift; sourceTree = "<group>"; };
+		D0C5052323AABC8500B42FAF /* FriendInvitedDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendInvitedDelegate.swift; sourceTree = "<group>"; };
+		D0C5052423AABC8500B42FAF /* FriendAllVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendAllVC.swift; sourceTree = "<group>"; };
+		D0C5052523AABC8500B42FAF /* Friend.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Friend.storyboard; sourceTree = "<group>"; };
+		D0C5052623AABC8500B42FAF /* ShowQRViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowQRViewController.swift; sourceTree = "<group>"; };
+		D0C5052723AABC8500B42FAF /* FriendInvitedVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendInvitedVC.swift; sourceTree = "<group>"; };
+		D0C5052823AABC8500B42FAF /* FriendHomeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendHomeVC.swift; sourceTree = "<group>"; };
+		D0C5052923AABC8500B42FAF /* ScanQRViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScanQRViewController.swift; sourceTree = "<group>"; };
+		D0C5052A23AABC8500B42FAF /* ScanQRCodeDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScanQRCodeDelegate.swift; sourceTree = "<group>"; };
+		D0C5052B23AABC8500B42FAF /* FriendInvitingCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendInvitingCell.swift; sourceTree = "<group>"; };
+		D0C5052C23AABC8500B42FAF /* ScanQRCodeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScanQRCodeCell.swift; sourceTree = "<group>"; };
+		D0C5052D23AABC8500B42FAF /* FriendInvitingVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendInvitingVC.swift; sourceTree = "<group>"; };
+		D0C5052E23AABC8500B42FAF /* FriendInvitingDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendInvitingDelegate.swift; sourceTree = "<group>"; };
 		E30DFA0D2398DE0F0081BC48 /* FavShopVC_.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavShopVC_.swift; sourceTree = "<group>"; };
 		E30DFA0F2398DE480081BC48 /* FavShopTVC_.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavShopTVC_.swift; sourceTree = "<group>"; };
 		E30DFA122398DE8B0081BC48 /* GroupCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupCell.swift; sourceTree = "<group>"; };
@@ -122,7 +123,6 @@
 		E39ACBE723920A01000973E3 /* MapVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapVC.swift; sourceTree = "<group>"; };
 		E39ACBE923928332000973E3 /* TPDirect.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TPDirect.framework; sourceTree = "<group>"; };
 		E39ACBEF23928C4B000973E3 /* BoardGame_ios.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BoardGame_ios.entitlements; sourceTree = "<group>"; };
-		E3CB1E3223A8CED300043275 /* ShopDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShopDetailViewController.swift; sourceTree = "<group>"; };
 		E3CB1E3523A8CF2000043275 /* GroupDetailTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupDetailTVC.swift; sourceTree = "<group>"; };
 		E3CB1E3623A8CF2000043275 /* GroupListData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupListData.swift; sourceTree = "<group>"; };
 		E3CB1E3723A8CF2000043275 /* GroupDetailData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupDetailData.swift; sourceTree = "<group>"; };
@@ -179,19 +179,6 @@
 			path = ChatList;
 			sourceTree = "<group>";
 		};
-		D005382023A68C2D00E9034F /* Shop */ = {
-			isa = PBXGroup;
-			children = (
-				D005382123A68C6100E9034F /* Shop.storyboard */,
-				D005382323A6970F00E9034F /* ShopMapVC.swift */,
-				D0604B7D23A897FE00D1E0E6 /* Shop.swift */,
-				D005382523A6980700E9034F /* ShopListTableVC.swift */,
-				D051B1C323A6A7000084DF08 /* ShopCell.swift */,
-				E3CB1E3223A8CED300043275 /* ShopDetailViewController.swift */,
-			);
-			path = Shop;
-			sourceTree = "<group>";
-		};
 		D088EAD3239FE18A006F650F /* Register */ = {
 			isa = PBXGroup;
 			children = (
@@ -201,22 +188,35 @@
 			path = Register;
 			sourceTree = "<group>";
 		};
-		D088EAE123A098E1006F650F /* Friend */ = {
+		D0C5051A23AABC8500B42FAF /* Shop */ = {
 			isa = PBXGroup;
 			children = (
-				D088EAE223A098E1006F650F /* FriendInvitedCell.swift */,
-				D088EAE323A098E1006F650F /* FriendInvitedDelegate.swift */,
-				D088EAE423A098E1006F650F /* FriendAllVC.swift */,
-				D088EAE523A098E1006F650F /* Friend.storyboard */,
-				D088EAE623A098E1006F650F /* ShowQRViewController.swift */,
-				D088EAE723A098E1006F650F /* FriendInvitedVC.swift */,
-				D088EAE823A098E1006F650F /* FriendHomeVC.swift */,
-				D088EAE923A098E1006F650F /* ScanQRViewController.swift */,
-				D088EAEA23A098E1006F650F /* ScanQRCodeDelegate.swift */,
-				D088EAEB23A098E1006F650F /* FriendInvitingCell.swift */,
-				D088EAEC23A098E1006F650F /* ScanQRCodeCell.swift */,
-				D088EAED23A098E1006F650F /* FriendInvitingVC.swift */,
-				D088EAEE23A098E1006F650F /* FriendInvitingDelegate.swift */,
+				D0C5051B23AABC8500B42FAF /* Shop.storyboard */,
+				D0C5051C23AABC8500B42FAF /* ShopMapVC.swift */,
+				D0C5051D23AABC8500B42FAF /* ShopCell.swift */,
+				D0C5051E23AABC8500B42FAF /* ShopDetailViewController.swift */,
+				D0C5051F23AABC8500B42FAF /* Shop.swift */,
+				D0C5052023AABC8500B42FAF /* ShopListTableVC.swift */,
+			);
+			path = Shop;
+			sourceTree = "<group>";
+		};
+		D0C5052123AABC8500B42FAF /* Friend */ = {
+			isa = PBXGroup;
+			children = (
+				D0C5052223AABC8500B42FAF /* FriendInvitedCell.swift */,
+				D0C5052323AABC8500B42FAF /* FriendInvitedDelegate.swift */,
+				D0C5052423AABC8500B42FAF /* FriendAllVC.swift */,
+				D0C5052523AABC8500B42FAF /* Friend.storyboard */,
+				D0C5052623AABC8500B42FAF /* ShowQRViewController.swift */,
+				D0C5052723AABC8500B42FAF /* FriendInvitedVC.swift */,
+				D0C5052823AABC8500B42FAF /* FriendHomeVC.swift */,
+				D0C5052923AABC8500B42FAF /* ScanQRViewController.swift */,
+				D0C5052A23AABC8500B42FAF /* ScanQRCodeDelegate.swift */,
+				D0C5052B23AABC8500B42FAF /* FriendInvitingCell.swift */,
+				D0C5052C23AABC8500B42FAF /* ScanQRCodeCell.swift */,
+				D0C5052D23AABC8500B42FAF /* FriendInvitingVC.swift */,
+				D0C5052E23AABC8500B42FAF /* FriendInvitingDelegate.swift */,
 			);
 			path = Friend;
 			sourceTree = "<group>";
@@ -269,8 +269,8 @@
 				E39ACBC2238FF46B000973E3 /* Common.swift */,
 				E3CB1E3423A8CF2000043275 /* Group */,
 				E39ACB1E238E4647000973E3 /* Login_SignOut_GroupList_favShop */,
-				D088EAE123A098E1006F650F /* Friend */,
-				D005382023A68C2D00E9034F /* Shop */,
+				D0C5052123AABC8500B42FAF /* Friend */,
+				D0C5051A23AABC8500B42FAF /* Shop */,
 				D088EAD3239FE18A006F650F /* Register */,
 				C492EE6D23964B06000AB2D9 /* Chat */,
 				E39ACB10238E1973000973E3 /* Assets.xcassets */,
@@ -386,11 +386,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D005382223A68C6100E9034F /* Shop.storyboard in Resources */,
+				D0C5053823AABC8500B42FAF /* Friend.storyboard in Resources */,
 				E39ACB11238E1973000973E3 /* Assets.xcassets in Resources */,
+				D0C5052F23AABC8500B42FAF /* Shop.storyboard in Resources */,
 				E39ACB0C238E1971000973E3 /* Main.storyboard in Resources */,
 				E3D5E97B23A1295100B6CD14 /* TPDirectResource in Resources */,
-				D088EAF223A098E1006F650F /* Friend.storyboard in Resources */,
 				C492EE6C23964AF3000AB2D9 /* Chat.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -407,54 +407,54 @@
 				E30DFA23239F43210081BC48 /* PlayerTVC.swift in Sources */,
 				E3CB1E4023A8CF2000043275 /* GroupListCollectionViewCell.swift in Sources */,
 				E39ACB05238E1971000973E3 /* AppDelegate.swift in Sources */,
-				E3CB1E3323A8CED300043275 /* ShopDetailViewController.swift in Sources */,
 				C492EE7623964C33000AB2D9 /* MsgReceivedTableViewCell.swift in Sources */,
 				C492EE8123964C53000AB2D9 /* ChatVC.swift in Sources */,
-				D088EAF823A098E1006F650F /* FriendInvitingCell.swift in Sources */,
+				D0C5053123AABC8500B42FAF /* ShopCell.swift in Sources */,
+				D0C5053623AABC8500B42FAF /* FriendInvitedDelegate.swift in Sources */,
+				D0C5053B23AABC8500B42FAF /* FriendHomeVC.swift in Sources */,
 				E30DFA132398DE8B0081BC48 /* GroupCell.swift in Sources */,
-				D051B1C423A6A7000084DF08 /* ShopCell.swift in Sources */,
 				E3CB1E3D23A8CF2000043275 /* GroupDetailData.swift in Sources */,
 				E39ACB0F238E1971000973E3 /* BoardGame_ios.xcdatamodeld in Sources */,
+				D0C5053D23AABC8500B42FAF /* ScanQRCodeDelegate.swift in Sources */,
+				D0C5054023AABC8500B42FAF /* FriendInvitingVC.swift in Sources */,
+				D0C5053523AABC8500B42FAF /* FriendInvitedCell.swift in Sources */,
 				E30DFA102398DE480081BC48 /* FavShopTVC_.swift in Sources */,
+				D0C5053023AABC8500B42FAF /* ShopMapVC.swift in Sources */,
 				C492EE8023964C53000AB2D9 /* ChatTableViewCell.swift in Sources */,
-				D088EAEF23A098E1006F650F /* FriendInvitedCell.swift in Sources */,
 				E3CB1E3F23A8CF2000043275 /* NewGroupCollectionViewCell.swift in Sources */,
-				D0604B7E23A897FE00D1E0E6 /* Shop.swift in Sources */,
-				D088EAF523A098E1006F650F /* FriendHomeVC.swift in Sources */,
 				E39ACBBE238FE8A3000973E3 /* FavShopCell.swift in Sources */,
 				E39ACBE823920A01000973E3 /* MapVC.swift in Sources */,
-				D088EAF923A098E1006F650F /* ScanQRCodeCell.swift in Sources */,
-				D088EAF323A098E1006F650F /* ShowQRViewController.swift in Sources */,
 				D088EAE0239FE18A006F650F /* RegisterDetailVC.swift in Sources */,
 				E39ACB25238EA523000973E3 /* SignOutTVC.swift in Sources */,
 				E3D5E98523A2726700B6CD14 /* TPDTransactionResult.swift in Sources */,
 				E30DFA1F239E140B0081BC48 /* PlayerData.swift in Sources */,
-				D088EAF623A098E1006F650F /* ScanQRViewController.swift in Sources */,
 				E39ACB20238E466C000973E3 /* LoginVC.swift in Sources */,
 				E3CB1E3C23A8CF2000043275 /* GroupListData.swift in Sources */,
+				D0C5053323AABC8500B42FAF /* Shop.swift in Sources */,
 				E3D5E98123A2524700B6CD14 /* TapPay.swift in Sources */,
-				D088EAFB23A098E1006F650F /* FriendInvitingDelegate.swift in Sources */,
+				D0C5053E23AABC8500B42FAF /* FriendInvitingCell.swift in Sources */,
+				D0C5054123AABC8500B42FAF /* FriendInvitingDelegate.swift in Sources */,
 				C492EE7923964C33000AB2D9 /* MsgVC.swift in Sources */,
-				D005382423A6970F00E9034F /* ShopMapVC.swift in Sources */,
 				E39ACB07238E1971000973E3 /* SceneDelegate.swift in Sources */,
+				D0C5053923AABC8500B42FAF /* ShowQRViewController.swift in Sources */,
 				E3CB1E3B23A8CF2000043275 /* GroupDetailTVC.swift in Sources */,
-				D088EAFA23A098E1006F650F /* FriendInvitingVC.swift in Sources */,
 				C492EE7823964C33000AB2D9 /* Msg.swift in Sources */,
-				D088EAF123A098E1006F650F /* FriendAllVC.swift in Sources */,
-				D088EAF423A098E1006F650F /* FriendInvitedVC.swift in Sources */,
+				D0C5053A23AABC8500B42FAF /* FriendInvitedVC.swift in Sources */,
 				D088EADF239FE18A006F650F /* RegisterHomeVC.swift in Sources */,
 				E32E3BF32395EDB000D7AB67 /* favShopVCDelegate.swift in Sources */,
 				E3D5E98323A2719E00B6CD14 /* TPDApplePayDelegate.swift in Sources */,
 				C492EE7723964C33000AB2D9 /* MsgSendedTableViewCell.swift in Sources */,
 				E30DFA172398DEB30081BC48 /* GroupData.swift in Sources */,
+				D0C5053423AABC8500B42FAF /* ShopListTableVC.swift in Sources */,
 				C492EE7F23964C53000AB2D9 /* Friend.swift in Sources */,
+				D0C5053F23AABC8500B42FAF /* ScanQRCodeCell.swift in Sources */,
 				E39ACBC3238FF46B000973E3 /* Common.swift in Sources */,
+				D0C5053223AABC8500B42FAF /* ShopDetailViewController.swift in Sources */,
 				E3CB1E3E23A8CF2000043275 /* GroupVC.swift in Sources */,
+				D0C5053C23AABC8500B42FAF /* ScanQRViewController.swift in Sources */,
 				E30DFA2923A0E5AA0081BC48 /* PlayerDataUpdateTVC.swift in Sources */,
+				D0C5053723AABC8500B42FAF /* FriendAllVC.swift in Sources */,
 				E30DFA152398DEA30081BC48 /* GroupListTVC.swift in Sources */,
-				D005382623A6980700E9034F /* ShopListTableVC.swift in Sources */,
-				D088EAF023A098E1006F650F /* FriendInvitedDelegate.swift in Sources */,
-				D088EAF723A098E1006F650F /* ScanQRCodeDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

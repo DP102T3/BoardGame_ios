@@ -29,6 +29,11 @@ class FriendAllVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
         
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        print("reloading")
+        fetchFriendList()
+    }
+    
     override var canBecomeFirstResponder: Bool {
         return true
     }
@@ -46,7 +51,8 @@ class FriendAllVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
         request.httpMethod = "POST"
 
         let json: [String: Any] = [
-            "player1Id": "\(user)"
+            "action": "getAll",
+            "playerId": "\(user)"
         ]
                     
         let jsonData = try? JSONSerialization.data(withJSONObject: json)
@@ -67,19 +73,16 @@ class FriendAllVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
             switch (httpResponse.statusCode) {
                case 200: //success response.
                  if let data = data {
-                     if let jsonString = String(data: data, encoding: .utf8) {
-                         // jsonString為從server處得到的回應，轉成字串後可以印出查看
-                         print(jsonString)
-                     }
-                     
                      //從json轉成資料格式，以利程式使用
                      if let json = (try? JSONSerialization.jsonObject(with: data, options: [])) as? [String:AnyObject] {
-                         print(json)
+                         // print(json)
                          //分別印出所有欄位
-                        self.friendList = json["result"] as! Array<[String:Any]>
-                        print(self.friendList)
+                        self.friendList = (json["result"] as! Array<[String:Any]>).filter({ (friend: [String : Any]) -> Bool in
+                            
+                            return friend["inviteStatus"] as! Int == 2
+                        })
                         
-                        let newFriend = self.friendList.last
+                        let newFriend = self.friendList.first
                         
                         DispatchQueue.main.async {
                             self.labelNewFriend.text = newFriend?["player2Name"] as? String
