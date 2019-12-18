@@ -127,7 +127,7 @@ class GroupVC: UIViewController,UICollectionViewDelegate,UICollectionViewDataSou
         /* identifier必須設定與Indentity inspector的Storyboard ID相同 */
         let groupDetailTVC = self.storyboard?.instantiateViewController(withIdentifier: "GroupDetailSB") as! GroupDetailTVC
         let groupListData = groupListDatas[indexPath.item-1]
-        groupDetailTVC.groupListData = groupListData
+        groupDetailTVC.group_no = groupListData.group_no
         self.navigationController?.pushViewController(groupDetailTVC, animated: false)
     }
 }

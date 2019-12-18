@@ -103,4 +103,11 @@ class GroupListTVC: UITableViewController {
         favGroupCell.lbTime.text = group.setup_time
         return favGroupCell
     }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let groupDetailTVC = self.storyboard?.instantiateViewController(withIdentifier: "GroupDetailSB") as! GroupDetailTVC
+        let groupData = favGroupData[indexPath.row]
+        groupDetailTVC.group_no = groupData.group_no
+        self.navigationController?.pushViewController(groupDetailTVC, animated: false)
+    }
 }

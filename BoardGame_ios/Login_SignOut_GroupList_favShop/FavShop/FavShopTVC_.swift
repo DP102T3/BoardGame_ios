@@ -17,8 +17,8 @@ class FavShopTVC_: UITableViewController, FavShopVCCellDelegate {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-           showAllFavShops()
-      }
+        showAllFavShops()
+    }
     
     /** tableView加上下拉更新功能 */
     func tableViewAddRefreshControl() {
@@ -105,9 +105,14 @@ class FavShopTVC_: UITableViewController, FavShopVCCellDelegate {
         indexPath = self.tableView.indexPath(for: sender)
     }
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let shopListVC = self.storyboard?.instantiateViewController(withIdentifier: "ShopListSB") as! ShopDetailViewController
+        self.navigationController?.pushViewController(shopListVC, animated: false)
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-            let shop = favShopData[indexPath!.row]
-            let detailVC = segue.destination as! MapVC
-            detailVC.favshop = shop
+        let shop = favShopData[indexPath!.row]
+        let mapVC = segue.destination as! MapVC
+        mapVC.favshop = shop
     }
 }

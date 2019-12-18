@@ -23,8 +23,9 @@ class GroupDetailTVC: UITableViewController {
     @IBOutlet weak var lbOtherInfo: UILabel!
     
     let url_server = URL(string: common_url + "FavServlet")
-    var groupListData: GroupListData?
+    var group_no: Int?
     var groupDetailData: GroupDetailData?
+    
     override func viewWillAppear(_ animated: Bool) {
         showGroupDetailData()
         showImage()
@@ -34,7 +35,7 @@ class GroupDetailTVC: UITableViewController {
     func showGroupDetailData() {
         var requestParam = [String: String]()
         requestParam["action"] = "getGroupDetailData"
-        requestParam["group_no"] = groupListData?.group_no.description
+        requestParam["group_no"] = String(group_no!)
         executeTask(url_server!, requestParam) { (data, response, error) in
             if error == nil {
                 if data != nil {
@@ -58,7 +59,7 @@ class GroupDetailTVC: UITableViewController {
     func showImage(){
         var requestParam = [String: Any]()
         requestParam["action"] = "getGroupImage"
-        requestParam["group_no"] = groupListData?.group_no
+        requestParam["group_no"] = group_no
         //設定圖片尺寸為螢幕的一半大小
         requestParam["imageSize"] = view.frame.width/2
         var image: UIImage?
