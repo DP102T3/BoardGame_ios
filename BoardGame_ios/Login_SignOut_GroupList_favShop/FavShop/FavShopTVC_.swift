@@ -3,9 +3,9 @@ import UIKit
 class FavShopTVC_: UITableViewController, FavShopVCCellDelegate {
     
     @IBOutlet var favTableView: UITableView!
-    var shop = ShopData.init(0, "", "", 0, 0)
+    var shop: Shop?
     var indexPath: IndexPath?
-    var favShopData = [ShopData]()
+    var favShopData = [Shop]()
     let url_server = URL(string: common_url + "FavServlet")
     var player_id: String?
     
@@ -30,15 +30,15 @@ class FavShopTVC_: UITableViewController, FavShopVCCellDelegate {
     
     @objc func showAllFavShops() {
         var requestParam = [String: String]()
-        requestParam["action"] = "getAll"
-        requestParam["player_id"] = "chengchi1223"
+        requestParam["action"] = "getAllFavShop"
+        requestParam["player_id"] = player_id
         executeTask(url_server!, requestParam) { (data, response, error) in
             if error == nil {
                 if data != nil {
                     // 將輸入資料列印出來除錯用
                     print("shopInput: \(String(data: data!, encoding: .utf8)!)")
                     
-                    if let result = try? JSONDecoder().decode([ShopData].self, from: data!) {
+                    if let result = try? JSONDecoder().decode([Shop].self, from: data!) {
                         self.favShopData = result
                         DispatchQueue.main.async {
                             if let control = self.favTableView.refreshControl {
@@ -76,7 +76,7 @@ class FavShopTVC_: UITableViewController, FavShopVCCellDelegate {
         //尚未取得圖片，另外開啟task請求
         var requestParam = [String: Any]()
         requestParam["action"] = "getShopImage"
-        requestParam["shop_id"] = shop.shop_id
+        requestParam["shop_id"] = shop?.shopId
         // 圖片寬度為tableViewCell的1/4，ImageView的寬度也建議在storyboard加上比例設定的constraint
         requestParam["imageSize"] = favShopCell.frame.width / 4
         var image: UIImage?
@@ -95,9 +95,10 @@ class FavShopTVC_: UITableViewController, FavShopVCCellDelegate {
             }
         }
         
-        favShopCell.lbShopName.text = shop.shopName
-        favShopCell.lbAddress.text = shop.address
-        favShopCell.lbRate.text = String("評分：\(shop.rate_total/shop.rate_count)")
+        favShopCell.lbShopName.text = shop?.shopName
+        favShopCell.lbAddress.text = shop?.shopAddress
+        let score = String(shop!.rateTotal / Double(shop!.rateCount))
+        favShopCell.lbRate.text = String(format: "%.1f", score)
         return favShopCell
     }
     

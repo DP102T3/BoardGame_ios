@@ -22,6 +22,8 @@ class PlayerDataUpdateTVC: UITableViewController, UIImagePickerControllerDelegat
     
     let url_server = URL(string: common_url + "FavServlet")
     var imageUpload: UIImage?
+    var player_id = loadUserDefaults("player_id")
+
     
     override func viewDidLoad() {
         addKeyboardObserver()
@@ -69,7 +71,7 @@ class PlayerDataUpdateTVC: UITableViewController, UIImagePickerControllerDelegat
         
         var requestParam = [String: String]()
         requestParam["action"] = "playerUpdate"
-        requestParam["player_id"] = "chengchi1223"
+        requestParam["player_id"] = player_id
         requestParam["playerUpdateData"] = try! String(data: JSONEncoder().encode(PlayerTVC.playerData), encoding: .utf8)
         if self.imageUpload != nil {
             requestParam["imageBase64"] = self.imageUpload!.jpegData(compressionQuality: 1.0)!.base64EncodedString()
@@ -108,7 +110,7 @@ class PlayerDataUpdateTVC: UITableViewController, UIImagePickerControllerDelegat
         // 利用spot ID去server端取對應照片
         var requestParam = [String: Any]()
         requestParam["action"] = "getPlayerImage"
-        requestParam["player_id"] = "chengchi1223"
+        requestParam["player_id"] = player_id
         // 圖片寬度 = 螢幕寬度的ㄉ/2
         requestParam["imageSize"] = view.frame.width/2
         executeTask(url_server!, requestParam) { (data, response, error) in

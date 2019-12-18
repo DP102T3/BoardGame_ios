@@ -14,6 +14,8 @@ class PlayerTVC: UITableViewController {
     
     let url_server = URL(string: common_url + "FavServlet")
     static var playerData: PlayerData?
+    var player_id = loadUserDefaults("player_id")
+
     
     override func viewWillAppear(_ animated: Bool) {
         showPlayerData()
@@ -24,7 +26,7 @@ class PlayerTVC: UITableViewController {
     func showPlayerData() {
         var requestParam = [String: String]()
         requestParam["action"] = "getPersonalData"
-        requestParam["player_id"] = "chengchi1223"
+        requestParam["player_id"] = player_id
         executeTask(url_server!, requestParam) { (data, response, error) in
             if error == nil {
                 if data != nil {
@@ -48,7 +50,7 @@ class PlayerTVC: UITableViewController {
     func showImage(){
         var requestParam = [String: Any]()
         requestParam["action"] = "getPlayerImage"
-        requestParam["player_id"] = "chengchi1223"
+        requestParam["player_id"] = player_id
         //設定個人頭貼尺寸為螢幕的一半大小
         requestParam["playerImageSize"] = view.frame.width/2
         var image: UIImage?

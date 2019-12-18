@@ -14,7 +14,7 @@ class MapVC: UIViewController , MKMapViewDelegate {
     
     var latitude: Double?
     var longitude: Double?
-    var favshop: ShopData!
+    var favshop: Shop!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,7 +39,7 @@ class MapVC: UIViewController , MKMapViewDelegate {
         let coordinate = CLLocationCoordinate2D(latitude: latitude ?? 0, longitude: longitude ?? 0)
         annotation.coordinate = coordinate
         annotation.title = "\(favshop.shopName))"
-        annotation.subtitle = favshop.address
+        annotation.subtitle = favshop.shopAddress
         mapView.addAnnotation(annotation)
         mapView.setCenter(coordinate, animated: true)
     }
@@ -65,13 +65,13 @@ class MapVC: UIViewController , MKMapViewDelegate {
         let annotation = MKPointAnnotation()
         annotation.coordinate = coordinate
         annotation.title = favshop.shopName
-        annotation.subtitle = favshop.address
+        annotation.subtitle = favshop.shopAddress
         mapView.addAnnotation(annotation)
     }
     
     func geocoder(){
         let geocoder = CLGeocoder()
-        geocoder.geocodeAddressString(favshop.address) { (placemarks, error) in
+        geocoder.geocodeAddressString(favshop!.shopAddress!) { (placemarks, error) in
             if placemarks != nil && placemarks!.count > 0 {
                 if let placemark = placemarks!.first {
                     let location = placemark.location!

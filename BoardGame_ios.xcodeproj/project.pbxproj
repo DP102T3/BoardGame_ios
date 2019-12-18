@@ -53,7 +53,6 @@
 		E39ACB20238E466C000973E3 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E39ACB1F238E466C000973E3 /* LoginVC.swift */; };
 		E39ACB25238EA523000973E3 /* SignOutTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E39ACB24238EA523000973E3 /* SignOutTVC.swift */; };
 		E39ACBBE238FE8A3000973E3 /* FavShopCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E39ACBBD238FE8A3000973E3 /* FavShopCell.swift */; };
-		E39ACBC0238FED69000973E3 /* ShopData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E39ACBBF238FED69000973E3 /* ShopData.swift */; };
 		E39ACBC3238FF46B000973E3 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = E39ACBC2238FF46B000973E3 /* Common.swift */; };
 		E39ACBE823920A01000973E3 /* MapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E39ACBE723920A01000973E3 /* MapVC.swift */; };
 		E39ACBEA23928333000973E3 /* TPDirect.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E39ACBE923928332000973E3 /* TPDirect.framework */; };
@@ -119,7 +118,6 @@
 		E39ACB1F238E466C000973E3 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		E39ACB24238EA523000973E3 /* SignOutTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignOutTVC.swift; sourceTree = "<group>"; };
 		E39ACBBD238FE8A3000973E3 /* FavShopCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavShopCell.swift; sourceTree = "<group>"; };
-		E39ACBBF238FED69000973E3 /* ShopData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopData.swift; sourceTree = "<group>"; };
 		E39ACBC2238FF46B000973E3 /* Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 		E39ACBE723920A01000973E3 /* MapVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapVC.swift; sourceTree = "<group>"; };
 		E39ACBE923928332000973E3 /* TPDirect.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TPDirect.framework; sourceTree = "<group>"; };
@@ -309,7 +307,6 @@
 			isa = PBXGroup;
 			children = (
 				E39ACBBD238FE8A3000973E3 /* FavShopCell.swift */,
-				E39ACBBF238FED69000973E3 /* ShopData.swift */,
 				E39ACBE723920A01000973E3 /* MapVC.swift */,
 				E32E3BF22395EDB000D7AB67 /* favShopVCDelegate.swift */,
 				E30DFA0D2398DE0F0081BC48 /* FavShopVC_.swift */,
@@ -406,7 +403,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				C492EE8223964C53000AB2D9 /* Group.swift in Sources */,
-				E39ACBC0238FED69000973E3 /* ShopData.swift in Sources */,
 				E30DFA0E2398DE0F0081BC48 /* FavShopVC_.swift in Sources */,
 				E30DFA23239F43210081BC48 /* PlayerTVC.swift in Sources */,
 				E3CB1E4023A8CF2000043275 /* GroupListCollectionViewCell.swift in Sources */,

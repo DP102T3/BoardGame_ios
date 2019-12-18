@@ -3,6 +3,8 @@ import UIKit
 class GroupListTVC: UITableViewController {
     var favGroupData = [GroupData]()
     let url_server = URL(string: common_url + "FavServlet")
+    var player_id = loadUserDefaults("player_id")
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,7 +26,7 @@ class GroupListTVC: UITableViewController {
     @objc func showAllFavGroup() {
         var requestParam = [String: String]()
         requestParam["action"] = "getAllFavGroup"
-        requestParam["player_id"] = "chengchi1223"
+        requestParam["player_id"] = player_id
         executeTask(url_server!, requestParam) { (data, response, error) in
             if error == nil {
                 if data != nil {

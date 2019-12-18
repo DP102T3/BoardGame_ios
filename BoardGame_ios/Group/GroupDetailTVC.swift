@@ -26,6 +26,7 @@ class GroupDetailTVC: UITableViewController {
     var group_no: Int?
     var groupDetailData: GroupDetailData?
     
+    
     override func viewWillAppear(_ animated: Bool) {
         showGroupDetailData()
         showImage()
