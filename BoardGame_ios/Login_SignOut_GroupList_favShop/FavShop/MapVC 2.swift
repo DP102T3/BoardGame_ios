@@ -1,49 +1,49 @@
 //
-//  ShopMapVC.swift
+//  MapVC.swift
 //  BoardGame_ios
 //
-//  Created by 洪瑞奇 on 2019/12/16.
+//  Created by 黃國展 on 2019/11/30.
 //  Copyright © 2019 黃國展. All rights reserved.
 //
 
 import UIKit
 import MapKit
 
-class ShopMapVC: UIViewController, MKMapViewDelegate {
-
-    @IBOutlet weak var MapView: MKMapView!
+class MapVC: UIViewController , MKMapViewDelegate {
+    @IBOutlet weak var mapView: MKMapView!
+    
     var latitude: Double?
     var longitude: Double?
-    var shop: Shop!
+    var favshop: ShopData!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        print(favshop.shopName)
+        self.title = favshop.shopName
         geocoder()
         setupMap()
-        // Do any additional setup after loading the view.
     }
     
     func setMapRegion() {
-           let span = MKCoordinateSpan(latitudeDelta: 0.2, longitudeDelta: 0.2)
-           var region = MKCoordinateRegion()
-           region.span = span
-           MapView.setRegion(region, animated: true)
-           MapView.regionThatFits(region)
-       }
-       
+        let span = MKCoordinateSpan(latitudeDelta: 0.2, longitudeDelta: 0.2)
+        var region = MKCoordinateRegion()
+        region.span = span
+        mapView.setRegion(region, animated: true)
+        mapView.regionThatFits(region)
+    }
+    
     func setupMap() {
-        MapView.delegate = self
+        mapView.delegate = self
         setMapRegion()
         let annotation = MKPointAnnotation()
         let coordinate = CLLocationCoordinate2D(latitude: latitude ?? 0, longitude: longitude ?? 0)
         annotation.coordinate = coordinate
-        annotation.title = "\(shop.shopName))"
-        annotation.subtitle = shop.shopAddress
-        MapView.addAnnotation(annotation)
-        MapView.setCenter(coordinate, animated: true)
+        annotation.title = "\(favshop.shopName))"
+        annotation.subtitle = favshop.address
+        mapView.addAnnotation(annotation)
+        mapView.setCenter(coordinate, animated: true)
     }
-
+    
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
         let identifier = "annotation"
         /* MKPinAnnotationView物件可以設定圖針顏色以及圖針掉落動畫 */
@@ -57,21 +57,21 @@ class ShopMapVC: UIViewController, MKMapViewDelegate {
     }
     
     func setMapCenter(center: CLLocationCoordinate2D) {
-        MapView.setCenter(center, animated: true)
+        mapView.setCenter(center, animated: true)
     }
     
     func setMapAnnotation(_ location: CLLocation) {
-           let coordinate = location.coordinate
-           let annotation = MKPointAnnotation()
-           annotation.coordinate = coordinate
-           annotation.title = shop.shopName
-           annotation.subtitle = shop.shopAddress
-           MapView.addAnnotation(annotation)
+        let coordinate = location.coordinate
+        let annotation = MKPointAnnotation()
+        annotation.coordinate = coordinate
+        annotation.title = favshop.shopName
+        annotation.subtitle = favshop.address
+        mapView.addAnnotation(annotation)
     }
     
     func geocoder(){
         let geocoder = CLGeocoder()
-        geocoder.geocodeAddressString(shop.shopAddress ?? "") { (placemarks, error) in
+        geocoder.geocodeAddressString(favshop.address) { (placemarks, error) in
             if placemarks != nil && placemarks!.count > 0 {
                 if let placemark = placemarks!.first {
                     let location = placemark.location!
@@ -82,17 +82,6 @@ class ShopMapVC: UIViewController, MKMapViewDelegate {
                 }
             }
         }
+        
     }
-    
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

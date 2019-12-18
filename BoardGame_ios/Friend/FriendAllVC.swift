@@ -16,7 +16,8 @@ class FriendAllVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
     @IBOutlet weak var tableViewAll: UITableView!
     @IBOutlet weak var labelNewFriend: UILabel!
     @IBOutlet weak var labelMoodNewFriend: UILabel!
-    
+    let user = loadUserDefaults("player_id")
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -25,6 +26,7 @@ class FriendAllVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
         
         tableViewAll.delegate = self
         tableViewAll.dataSource = self
+        
     }
     
     override var canBecomeFirstResponder: Bool {
@@ -37,14 +39,14 @@ class FriendAllVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
         let configuration = URLSessionConfiguration.default
         let session = URLSession(configuration: configuration)
                     
-        let url = URL(string: "http://localhost:8080/Advertisement_Server/GetFriendList")
+        let url = URL(string: "http://127.0.0.1:8080/Advertisement_Server/GetFriendList")
         var request : URLRequest = URLRequest(url: url!)
 
         // 利用POST方法傳給server
         request.httpMethod = "POST"
 
         let json: [String: Any] = [
-            "player1Id": "myself"
+            "player1Id": "\(user)"
         ]
                     
         let jsonData = try? JSONSerialization.data(withJSONObject: json)

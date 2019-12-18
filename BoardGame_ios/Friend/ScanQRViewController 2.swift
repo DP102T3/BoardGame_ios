@@ -16,8 +16,7 @@ class ScanQRViewController: UIViewController, AVCaptureMetadataOutputObjectsDele
     var captureSession:AVCaptureSession?
     var videoPreviewLayer:AVCaptureVideoPreviewLayer?
     var qrCodeFrameView:UIView?
-    let user = loadUserDefaults("player_id")
-
+    
     var friend: [String: Any]?
     
     override func viewDidLoad() {
@@ -86,18 +85,15 @@ class ScanQRViewController: UIViewController, AVCaptureMetadataOutputObjectsDele
             captureMetadataOutput.setMetadataObjectsDelegate(self, queue: DispatchQueue.main)
             captureMetadataOutput.metadataObjectTypes = [AVMetadataObject.ObjectType.qr]
             
-            DispatchQueue.main.async {
-                // 初始化影片預覽層，並將其作為子層加入 viewPreview 視圖的圖層中
-                self.videoPreviewLayer = AVCaptureVideoPreviewLayer(session: self.captureSession!)
-                self.videoPreviewLayer?.videoGravity = AVLayerVideoGravity.resizeAspectFill
-                self.videoPreviewLayer?.frame = self.view.layer.bounds
-                self.view.layer.addSublayer(self.videoPreviewLayer!)
-                           
-                // 開始影片的擷取
-                self.captureSession!.startRunning()
-            }
+            // 初始化影片預覽層，並將其作為子層加入 viewPreview 視圖的圖層中
+            videoPreviewLayer = AVCaptureVideoPreviewLayer(session: captureSession!)
+            videoPreviewLayer?.videoGravity = AVLayerVideoGravity.resizeAspectFill
+            videoPreviewLayer?.frame = view.layer.bounds
+            view.layer.addSublayer(videoPreviewLayer!)
             
-              
+            // 開始影片的擷取
+            captureSession!.startRunning()
+            
 
         } catch {
             // 假如有錯誤產生、單純輸出其狀況不再繼續執行
@@ -141,13 +137,10 @@ class ScanQRViewController: UIViewController, AVCaptureMetadataOutputObjectsDele
     func parseFriendProfile(_ jsonString: String) {
         if let json = (try? JSONSerialization.jsonObject(with: jsonString.data(using: .utf8)!, options: [])) as? [String: Any] {
             print(json)
-            print(json["frNkName"] ?? "empty name")
-            print(json["frID"] ?? "empty id")
+            print(json["nkName"] ?? "empty name")
+            print(json["id"] ?? "empty id")
             
-            friend = [
-                "id": json["frID"] ?? "",
-                "nkName": json["frNkName"] ?? ""
-            ]
+            friend = json
             
             closeQRCodeScanner()
             
@@ -165,14 +158,14 @@ class ScanQRViewController: UIViewController, AVCaptureMetadataOutputObjectsDele
         let configuration = URLSessionConfiguration.default
         let session = URLSession(configuration: configuration)
                     
-        let url = URL(string: "http://127.0.0.1:8080/Advertisement_Server/CreateFriend")
+        let url = URL(string: "http://localhost:8080/Advertisement_Server/CreateFriend")
         var request : URLRequest = URLRequest(url: url!)
 
         // 利用POST方法傳給server
         request.httpMethod = "POST"
 
         let json: [String: Any] = [
-            "player1Id": "\(user)",
+            "player1Id": "myself",
             "player2Id": friend["id"] as! String,
             "inviteStatus": 1,
             "pointCount": 0

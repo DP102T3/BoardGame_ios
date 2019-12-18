@@ -12,9 +12,8 @@ class ShopListTableVC: UITableViewController {
     
     @IBOutlet var shopTableView: UITableView!
     
-        var indexPath: IndexPath?
         var shopList = [Shop]()
-        let url_server = URL(string: common_url + "SignupServlet")
+        let url_server = URL(string: urlForFriendAndShop + "GetShops")
         
         override func viewDidLoad() {
             super.viewDidLoad()
@@ -22,26 +21,32 @@ class ShopListTableVC: UITableViewController {
         }
         
         override func viewWillAppear(_ animated: Bool) {
-               showAllFavShops()
-          }
+            showAllShops()
+        }
         
         /** tableView加上下拉更新功能 */
         func tableViewAddRefreshControl() {
             let refreshControl = UIRefreshControl()
             refreshControl.attributedTitle = NSAttributedString(string: "Pull to refresh")
-            refreshControl.addTarget(self, action: #selector(showAllFavShops), for: .valueChanged)
+            refreshControl.addTarget(self, action: #selector(showAllShops), for: .valueChanged)
             self.tableView.refreshControl = refreshControl
         }
         
-        @objc func showAllFavShops() {
+        @objc func showAllShops() {
             var requestParam = [String: String]()
-            requestParam["action"] = "getAll"
-            requestParam["player_id"] = "chengchi1223"
+            requestParam["action"] = "getAllShop"
             executeTask(url_server!, requestParam) { (data, response, error) in
                 if error == nil {
                     if data != nil {
                         // 將輸入資料列印出來除錯用
                         print("shopInput: \(String(data: data!, encoding: .utf8)!)")
+                        
+                        do {
+                            try JSONDecoder().decode([Shop].self, from: data!)
+                        } catch {
+                            print(error)
+                        }
+                        
                         
                         if let result = try? JSONDecoder().decode([Shop].self, from: data!) {
                             self.shopList = result
@@ -81,12 +86,19 @@ class ShopListTableVC: UITableViewController {
             requestParam["shopId"] = shop.shopId
             // 圖片寬度為tableViewCell的1/4，ImageView的寬度也建議在storyboard加上比例設定的constraint
             requestParam["imageSize"] = shopCell.frame.width / 4
-            var image: UIImage?
             executeTask(url_server!, requestParam) { (data, response, error) in
+                
+                var image: UIImage?
+                
                 if error == nil {
                     print(requestParam)
-                    if data != nil {
-                        image = UIImage(data: data!)
+                    if let data = data {
+                        if let base64String = String(data: data, encoding: .utf8) {
+                            if let decodedData = NSData(base64Encoded: base64String, options: []){
+                                let decodedimage = UIImage(data: decodedData as Data)
+                                image = decodedimage
+                            }
+                        }
                     }
                     if image == nil {
                         image = UIImage(named: "noImage.jpg")
@@ -99,17 +111,18 @@ class ShopListTableVC: UITableViewController {
             
             shopCell.labelShop.text = shop.shopName
             shopCell.labelAddress.text = shop.shopAddress
-            shopCell.labelRate.text = String(shop.rateTotal / Double(shop.rateCount))
+            let score = shop.rateTotal / Double(shop.rateCount)
+            shopCell.labelRate.text = String(format: "%.1f", score)
+            
+            shopCell.tag = indexPath.row
+            
             return shopCell
         }
         
-        func favShopVCCellOnClick(_ sender: FavShopCell) {
-            indexPath = self.tableView.indexPath(for: sender)
-        }
-        
         override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-                let shop = shopList[indexPath!.row]
-                let detailVC = segue.destination as! ShopDetailViewController
-                detailVC.shop = shop
+            let cell = sender as! ShopCell
+            let shop = shopList[cell.tag]
+            let detailVC = segue.destination as! ShopDetailViewController
+            detailVC.shop = shop
         }
     }
