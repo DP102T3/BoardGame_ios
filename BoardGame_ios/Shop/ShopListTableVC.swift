@@ -41,11 +41,11 @@ class ShopListTableVC: UITableViewController {
                         // 將輸入資料列印出來除錯用
                         print("shopInput: \(String(data: data!, encoding: .utf8)!)")
                         
-                        do {
-                            try JSONDecoder().decode([Shop].self, from: data!)
-                        } catch {
-                            print(error)
-                        }
+//                        do {
+//                            try JSONDecoder().decode([Shop].self, from: data!)
+//                        } catch {
+//                            print(error)
+//                        }
                         
                         
                         if let result = try? JSONDecoder().decode([Shop].self, from: data!) {

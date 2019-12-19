@@ -5,6 +5,7 @@ class LoginVC: UIViewController {
     @IBOutlet weak var tfPassword: UITextField!
     @IBOutlet weak var lbResult: UILabel!
     
+    @IBOutlet weak var setPlayer: UIButton!
     var result: String?
     var userName: String?
     var player_id: String?
@@ -90,5 +91,9 @@ class LoginVC: UIViewController {
         }
     }
     
+    @IBAction func setText(_ sender: UIButton) {
+        tfUserName.text = "chengchi1223"
+        tfPassword.text = "123"
+    }
 }
 
