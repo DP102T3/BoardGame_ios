@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Njv-Lh-XOk">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Njv-Lh-XOk">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -389,7 +389,7 @@
             </objects>
             <point key="canvasLocation" x="-2062.3188405797105" y="2051.7857142857142"/>
         </scene>
-        <!--Fav ShopVC-->
+        <!--個人頁面-->
         <scene sceneID="H6l-gv-9XZ">
             <objects>
                 <viewController restorationIdentifier="PersonalDataRD" storyboardIdentifier="PersonalDataSB" id="eWG-6d-wuB" customClass="FavShopVC_" customModule="BoardGame_ios" customModuleProvider="target" sceneMemberID="viewController">
@@ -434,7 +434,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="NoP-LH-IxO"/>
                     </view>
-                    <navigationItem key="navigationItem" id="3Do-X5-xGC">
+                    <navigationItem key="navigationItem" title="個人頁面" id="3Do-X5-xGC">
                         <barButtonItem key="rightBarButtonItem" title="設定" id="L6u-cR-Eb5">
                             <connections>
                                 <segue destination="2oh-Yw-oxF" kind="show" id="G2e-OX-HSj"/>
@@ -1431,7 +1431,7 @@
             </objects>
             <point key="canvasLocation" x="311.59420289855075" y="4644.6428571428569"/>
         </scene>
-        <!--GroupVC-->
+        <!--揪團-->
         <scene sceneID="vwj-Ot-LBq">
             <objects>
                 <viewController storyboardIdentifier="GroupListSB" id="cSd-w8-KVw" customClass="GroupVC" customModule="BoardGame_ios" customModuleProvider="target" sceneMemberID="viewController">
@@ -1440,7 +1440,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="3By-Lk-V22">
-                                <rect key="frame" x="0.0" y="132" width="414" height="764"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="UHd-Ug-jRa">
@@ -1545,16 +1545,11 @@
                                     <outlet property="delegate" destination="cSd-w8-KVw" id="w1M-3d-wAL"/>
                                 </connections>
                             </collectionView>
-                            <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mhs-8G-08I">
-                                <rect key="frame" x="0.0" y="88" width="414" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </searchBar>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="bO7-NT-DKn"/>
                     </view>
-                    <navigationItem key="navigationItem" id="dXd-Wc-A3T"/>
+                    <navigationItem key="navigationItem" title="揪團" id="dXd-Wc-A3T"/>
                     <connections>
                         <outlet property="groupColletctionView" destination="3By-Lk-V22" id="8dT-Hb-DO6"/>
                         <segue destination="T4H-jL-iUD" kind="show" identifier="GroupDetailSegue" id="zXO-t6-yXK"/>
@@ -1564,7 +1559,7 @@
             </objects>
             <point key="canvasLocation" x="1197.1014492753625" y="394.41964285714283"/>
         </scene>
-        <!--Group DetailTVC-->
+        <!--團資訊-->
         <scene sceneID="1lC-AI-egk">
             <objects>
                 <tableViewController storyboardIdentifier="GroupDetailSB" id="T4H-jL-iUD" customClass="GroupDetailTVC" customModule="BoardGame_ios" customModuleProvider="target" sceneMemberID="viewController">
@@ -1862,7 +1857,7 @@
                         </connections>
                     </tableView>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" id="SO9-aH-tTo"/>
+                    <navigationItem key="navigationItem" title="團資訊" id="SO9-aH-tTo"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="ivGroupDetail" destination="gG9-eD-oM1" id="Cvt-hq-blO"/>
